@@ -929,3 +929,139 @@
         line-height: 1.38;
     }
 }
+
+/* =========================
+   Property cards: hover + shine only
+   Does NOT change original card background
+========================= */
+
+.property-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        border-color var(--transition-base),
+        filter var(--transition-base);
+}
+
+/* Блеск поверх карточки */
+.property-card::after {
+    content: "";
+    position: absolute;
+    top: -45%;
+    left: -85%;
+    z-index: 4;
+    width: 46%;
+    height: 190%;
+    background:
+        linear-gradient(115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.04) 28%,
+            rgba(255, 255, 255, 0.42) 48%,
+            rgba(255, 255, 255, 0.10) 62%,
+            transparent 100%);
+    transform: rotate(12deg);
+    pointer-events: none;
+    transition: left 780ms ease;
+}
+
+/* Чтобы контент был выше декоративного слоя */
+.property-card__content {
+    position: relative;
+    z-index: 5;
+}
+
+.property-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(24, 200, 255, 0.48);
+    box-shadow:
+        0 28px 70px rgba(24, 184, 255, 0.20),
+        0 18px 46px rgba(6, 23, 36, 0.14);
+    filter: saturate(1.06);
+}
+
+.property-card:hover::after {
+    left: 135%;
+}
+
+/* Лейбл чуть светится на hover */
+.property-card__label {
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        background var(--transition-base),
+        color var(--transition-base);
+}
+
+.property-card:hover .property-card__label {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(24, 184, 255, 0.18);
+}
+
+/* Заголовок живее */
+.property-card h3 {
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base);
+}
+
+.property-card:hover h3 {
+    transform: translateX(4px);
+    color: var(--color-accent-bright);
+}
+
+.property-card--commercial:hover h3 {
+    color: var(--color-orange-bright);
+}
+
+/* Галочки подсвечиваются */
+.property-card .check-list li::before {
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.property-card:hover .check-list li::before {
+    transform: rotate(-45deg) scale(1.08);
+    border-color: var(--color-accent-bright);
+    box-shadow: 0 0 16px rgba(24, 200, 255, 0.35);
+}
+
+.property-card--commercial:hover .check-list li::before {
+    border-color: var(--color-orange-bright);
+    box-shadow: 0 0 16px rgba(255, 138, 61, 0.32);
+}
+
+/* Ссылка двигается и подсвечивается */
+.property-card .link-arrow {
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base);
+}
+
+.property-card:hover .link-arrow {
+    transform: translateX(5px);
+    color: var(--color-accent-bright);
+}
+
+.property-card--commercial:hover .link-arrow {
+    color: var(--color-orange-bright);
+}
+
+.property-card:hover .link-arrow::after {
+    transform: translateX(5px);
+}
+
+/* На мобилках hover мягче */
+@media (max-width: 767px) {
+    .property-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .property-card::after {
+        width: 58%;
+    }
+}
