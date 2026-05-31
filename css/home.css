@@ -11,75 +11,6 @@
     min-height: clamp(560px, 78vh, 760px);
 }
 
-/* =========================
-   Home services
-========================= */
-
-.home-services {
-    overflow: hidden;
-}
-
-.home-services::before {
-    content: "";
-    position: absolute;
-    top: 70px;
-    right: -140px;
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(24, 200, 255, 0.15), transparent 68%);
-    pointer-events: none;
-}
-
-.home-services__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
-}
-
-.home-service-card {
-    aspect-ratio: 1 / 1;
-    min-height: auto;
-}
-
-.home-service-card--replacement {
-    --photo: url("../assets/images/window-replacement.jpg");
-}
-
-.home-service-card--installation {
-    --photo: url("../assets/images/window-installation.jpg");
-}
-
-.home-service-card--repair {
-    --photo: url("../assets/images/window-repair.jpg");
-}
-
-.home-service-card--efficient {
-    --photo: url("../assets/images/energy-efficient-windows.jpg");
-}
-
-.home-service-card__icon {
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    z-index: 2;
-    color: rgba(255, 255, 255, 0.86);
-    font-size: 0.82rem;
-    font-weight: 950;
-    letter-spacing: 0.1em;
-}
-
-.home-service-card .photo-card__content {
-    padding: 24px;
-}
-
-.home-service-card h3 {
-    max-width: 260px;
-}
-
-.home-service-card p {
-    max-width: 310px;
-}
 
 /* =========================
    Popular projects
@@ -566,5 +497,435 @@
 
     .final-cta-card__actions .btn {
         width: 100%;
+    }
+}
+
+/* =========================
+   Window pane service section
+   Card itself = window
+========================= */
+
+.window-pane-section {
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 8% 12%, rgba(24, 200, 255, 0.14), transparent 32%),
+        radial-gradient(circle at 88% 16%, rgba(255, 138, 61, 0.1), transparent 28%),
+        linear-gradient(180deg, var(--color-bg-main), var(--color-bg-ice));
+}
+
+.window-pane-section::before {
+    content: "";
+    position: absolute;
+    top: 78px;
+    right: -150px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(24, 200, 255, 0.16), transparent 68%);
+    pointer-events: none;
+}
+
+.window-pane-section::after {
+    content: "";
+    position: absolute;
+    left: -140px;
+    bottom: 60px;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(24, 184, 255, 0.16);
+    border-radius: 46px;
+    transform: rotate(14deg);
+    background:
+        linear-gradient(90deg, transparent 48%, rgba(24, 184, 255, 0.08) 49%, rgba(24, 184, 255, 0.08) 51%, transparent 52%),
+        linear-gradient(0deg, transparent 48%, rgba(24, 184, 255, 0.08) 49%, rgba(24, 184, 255, 0.08) 51%, transparent 52%);
+    pointer-events: none;
+}
+
+.window-pane-section__heading {
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin-bottom: 38px;
+}
+
+.window-pane-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Main card-window */
+.window-pane-card {
+    --window-photo: linear-gradient(135deg, #58C7FF, #F8FCFF);
+
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: flex-end;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 10px solid var(--color-dark-850);
+    border-radius: 34px 34px 18px 18px;
+    background: var(--color-dark-850);
+    color: var(--color-white);
+    box-shadow:
+        0 24px 60px rgba(6, 23, 36, 0.16),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.window-pane-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background:
+        linear-gradient(180deg, rgba(6, 23, 36, 0.02), rgba(6, 23, 36, 0.18)),
+        var(--window-photo) center / cover no-repeat;
+    transform: scale(1.04);
+    transition: transform var(--transition-slow);
+}
+
+.window-pane-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(115deg, transparent 0 18%, rgba(255, 255, 255, 0.24) 19%, transparent 34%),
+        linear-gradient(115deg, transparent 0 58%, rgba(255, 255, 255, 0.13) 59%, transparent 72%),
+        linear-gradient(180deg, rgba(6, 23, 36, 0.02) 0%, rgba(6, 23, 36, 0.24) 42%, rgba(6, 23, 36, 0.88) 100%);
+    pointer-events: none;
+}
+
+.window-pane-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-dark-900);
+    box-shadow:
+        0 30px 75px rgba(24, 184, 255, 0.24),
+        0 18px 44px rgba(6, 23, 36, 0.18);
+}
+
+.window-pane-card:hover::before {
+    transform: scale(1.1);
+}
+
+/* Real window dividers across the whole card */
+.window-pane-card__muntins {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.window-pane-card__muntins::before,
+.window-pane-card__muntins::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow:
+        0 0 0 1px rgba(6, 23, 36, 0.12),
+        0 8px 24px rgba(6, 23, 36, 0.12);
+}
+
+.window-pane-card__muntins::before {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 9px;
+    transform: translateX(-50%);
+}
+
+.window-pane-card__muntins::after {
+    top: 46%;
+    right: 0;
+    left: 0;
+    height: 9px;
+    transform: translateY(-50%);
+}
+
+/* Inner glass border */
+.window-pane-card__muntins {
+    border: 6px solid rgba(255, 255, 255, 0.82);
+    border-radius: 23px 23px 8px 8px;
+}
+
+/* Side handle on the card-window */
+.window-pane-card__handle {
+    position: absolute;
+    top: 48%;
+    right: 14px;
+    z-index: 4;
+    width: 10px;
+    height: 48px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(180deg, var(--color-orange-bright), var(--color-orange-hover));
+    box-shadow:
+        0 10px 20px rgba(6, 23, 36, 0.22),
+        0 0 0 4px rgba(255, 138, 61, 0.14);
+    transform: translateY(-50%);
+}
+
+/* Number */
+.window-pane-card__number {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    background: rgba(6, 23, 36, 0.38);
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 950;
+    backdrop-filter: blur(12px);
+}
+
+/* Text plate on glass */
+.window-pane-card__content {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    gap: 10px;
+    width: calc(100% - 28px);
+    margin: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 24px 24px 8px 8px;
+    background:
+        radial-gradient(circle at top right, rgba(24, 200, 255, 0.18), transparent 34%),
+        rgba(6, 23, 36, 0.78);
+    padding: 20px;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
+    transition:
+        transform var(--transition-base),
+        background var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.window-pane-card:hover .window-pane-card__content {
+    transform: translateY(-4px);
+    border-color: rgba(24, 200, 255, 0.46);
+    background:
+        radial-gradient(circle at top right, rgba(24, 200, 255, 0.24), transparent 34%),
+        rgba(6, 23, 36, 0.84);
+}
+
+.window-pane-card__tag {
+    display: inline-flex;
+    width: fit-content;
+    border-radius: var(--radius-pill);
+    background: rgba(24, 200, 255, 0.18);
+    color: var(--color-accent-bright);
+    padding: 8px 11px;
+    font-size: 0.7rem;
+    font-weight: 950;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.window-pane-card strong {
+    max-width: 430px;
+    color: var(--color-white);
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    font-weight: 950;
+    line-height: 1.02;
+    letter-spacing: -0.06em;
+}
+
+.window-pane-card small {
+    max-width: 330px;
+    color: var(--color-text-light);
+    font-size: 0.92rem;
+    font-weight: 650;
+    line-height: 1.45;
+}
+
+.window-pane-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin-top: 4px;
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 950;
+}
+
+.window-pane-card__link::after {
+    content: "→";
+    color: var(--color-accent-bright);
+    transition: transform var(--transition-base);
+}
+
+.window-pane-card:hover .window-pane-card__link::after {
+    transform: translateX(5px);
+}
+
+/* Photos */
+.window-pane-card--replacement {
+    --window-photo: url("../assets/images/window-replacement.jpg");
+}
+
+.window-pane-card--installation {
+    --window-photo: url("../assets/images/window-installation.jpg");
+}
+
+.window-pane-card--repair {
+    --window-photo: url("../assets/images/window-repair.jpg");
+}
+
+.window-pane-card--efficient {
+    --window-photo: url("../assets/images/energy-efficient-windows.jpg");
+}
+
+.window-pane-card--efficient .window-pane-card__tag {
+    background: rgba(255, 138, 61, 0.18);
+    color: var(--color-orange-bright);
+}
+
+.window-pane-card--efficient .window-pane-card__link::after {
+    color: var(--color-orange-bright);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (min-width: 640px) {
+    .window-pane-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .window-pane-card {
+        border-width: 9px;
+    }
+
+    .window-pane-card__content {
+        padding: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .window-pane-grid {
+        gap: 26px;
+    }
+
+    .window-pane-card {
+        min-height: 420px;
+    }
+
+    .window-pane-card__content {
+        margin: 18px;
+        width: calc(100% - 36px);
+        padding: 22px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .window-pane-card {
+        min-height: 470px;
+    }
+}
+
+@media (max-width: 639px) {
+    .window-pane-section__heading {
+        text-align: left;
+    }
+
+    .window-pane-section__heading .section-kicker {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .window-pane-card {
+        aspect-ratio: 1 / 1;
+        min-height: 330px;
+        border-width: 8px;
+        border-radius: 28px 28px 15px 15px;
+    }
+
+    .window-pane-card__muntins {
+        border-width: 5px;
+        border-radius: 19px 19px 7px 7px;
+    }
+
+    .window-pane-card__muntins::before {
+        width: 7px;
+    }
+
+    .window-pane-card__muntins::after {
+        height: 7px;
+    }
+
+    .window-pane-card__number {
+        top: 18px;
+        left: 18px;
+        width: 42px;
+        height: 42px;
+        font-size: 0.82rem;
+    }
+
+    .window-pane-card__handle {
+        right: 10px;
+        width: 8px;
+        height: 40px;
+    }
+
+    .window-pane-card__content {
+        margin: 12px;
+        width: calc(100% - 24px);
+        padding: 16px;
+        border-radius: 20px 20px 8px 8px;
+    }
+
+    .window-pane-card strong {
+        font-size: 1.32rem;
+    }
+
+    .window-pane-card small {
+        font-size: 0.84rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .window-pane-card {
+        min-height: 300px;
+        border-width: 7px;
+    }
+
+    .window-pane-card__number {
+        width: 38px;
+        height: 38px;
+    }
+
+    .window-pane-card__content {
+        padding: 14px;
+    }
+
+    .window-pane-card__tag {
+        padding: 7px 10px;
+        font-size: 0.65rem;
+    }
+
+    .window-pane-card strong {
+        font-size: 1.2rem;
+    }
+
+    .window-pane-card small {
+        font-size: 0.8rem;
+        line-height: 1.38;
     }
 }
