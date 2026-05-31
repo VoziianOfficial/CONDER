@@ -519,6 +519,20 @@
                 link.setAttribute('aria-current', 'page');
             }
         });
+
+        const servicePages = [
+            'window-replacement.html',
+            'window-installation.html',
+            'window-repair.html',
+            'energy-efficient-windows.html'
+        ];
+
+        if (servicePages.includes(currentPage)) {
+            document.querySelectorAll('.services-toggle').forEach((toggle) => {
+                toggle.classList.add('is-active');
+                toggle.setAttribute('aria-current', 'page');
+            });
+        }
     }
 
     function getCurrentPageName() {

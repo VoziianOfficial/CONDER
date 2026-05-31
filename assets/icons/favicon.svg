@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="83 63 342 342" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#58C7FF"/>
+            <stop offset="100%" stop-color="#2EAFFF"/>
+        </linearGradient>
+
+        <clipPath id="rightInnerClip">
+            <polygon points="265,132 371,87 371,377 265,339"/>
+        </clipPath>
+    </defs>
+
+    <polygon points="118,90 260,110 260,364 118,385" fill="#0B2E63"/>
+
+    <polygon points="140,112 240,124 240,348 140,361" fill="white"/>
+
+    <polygon points="148,120 232,131 232,338 148,352" fill="url(#skyGradient)"/>
+
+    <path d="M148 352V245
+            C162 244 174 249 181 258
+            C187 250 198 247 208 251
+            C224 257 230 270 229 285
+            C242 287 252 294 258 306
+            C266 322 266 338 266 352H148Z"
+        fill="white"/>
+
+    <polygon points="247,120 390,63 390,405 247,353" fill="#0B2E63"/>
+
+    <polygon points="265,132 371,87 371,377 265,339" fill="white"/>
+
+    <g clip-path="url(#rightInnerClip)" stroke="#0B2E63" stroke-width="12" stroke-linecap="square">
+        <line x1="316" y1="108" x2="316" y2="358"/>
+        <line x1="255" y1="235" x2="380" y2="228"/>
+    </g>
+
+    <polygon points="240,124 247,120 247,353 240,348" fill="white"/>
+
+    <rect x="257" y="228" width="12" height="44" rx="6" fill="#F28A2E"/>
+</svg>
