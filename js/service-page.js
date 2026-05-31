@@ -146,7 +146,7 @@
         });
 
         const tabTitle = button.dataset.title || button.textContent.trim();
-        const tabImage = button.dataset.image || 'assets/images/tab-double-hung-windows.jpg';
+        const tabImage = button.dataset.image || '../assets/images/tab-double-hung-windows.jpg';
         const tabDescription = button.dataset.description || '';
         const compareItems = parseCompareItems(button.dataset.compare);
 
