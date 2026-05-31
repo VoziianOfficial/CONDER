@@ -1646,3 +1646,15 @@ textarea.form-control {
         transition-duration: 0.001ms !important;
     }
 }
+
+@media (min-width: 1024px) {
+    .services-dropdown:hover .services-dropdown__menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0);
+    }
+
+    .services-dropdown:hover .services-toggle__chevron {
+        transform: rotate(180deg);
+    }
+}
