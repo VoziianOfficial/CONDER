@@ -1658,3 +1658,42 @@ textarea.form-control {
         transform: rotate(180deg);
     }
 }
+
+/* =========================
+   Global centered section headings
+========================= */
+
+.section-heading {
+    width: 100%;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 38px;
+    text-align: center;
+}
+
+.section-heading .section-kicker {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-heading h2 {
+    max-width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-heading p {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Если h2 стоит в секции без .section-heading */
+.section>.container>h2,
+.section>.container--wide>h2 {
+    max-width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}

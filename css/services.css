@@ -977,3 +977,257 @@
         animation: none;
     }
 }
+
+/* =========================
+   Services property section polish
+========================= */
+
+.services-property-section {
+    overflow: hidden;
+}
+
+/* Заголовок на всю ширину */
+.services-property-section .section-heading {
+    max-width: 100%;
+    width: 100%;
+}
+
+.services-property-section .section-heading h2 {
+    max-width: 980px;
+}
+
+.services-property-section .section-heading p:not(.section-kicker) {
+    max-width: 760px;
+}
+
+/* Карточки */
+.services-property-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border: 1px solid rgba(24, 184, 255, 0.22);
+    border-radius: var(--radius-xl);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        background var(--transition-base);
+}
+
+/* Оконная декоративная рамка внутри */
+.services-property-card::before {
+    content: "";
+    position: absolute;
+    right: -72px;
+    bottom: -92px;
+    z-index: -1;
+    width: 270px;
+    height: 270px;
+    border: 1px solid rgba(24, 184, 255, 0.18);
+    border-radius: 40px;
+    background:
+        linear-gradient(90deg, transparent 48%, rgba(24, 184, 255, 0.11) 49%, rgba(24, 184, 255, 0.11) 51%, transparent 52%),
+        linear-gradient(0deg, transparent 48%, rgba(24, 184, 255, 0.11) 49%, rgba(24, 184, 255, 0.11) 51%, transparent 52%);
+    transform: rotate(12deg);
+    opacity: 0.75;
+    transition:
+        transform var(--transition-slow),
+        opacity var(--transition-base);
+    pointer-events: none;
+}
+
+/* Блеск */
+.services-property-card::after {
+    content: "";
+    position: absolute;
+    top: -55%;
+    left: -85%;
+    z-index: 2;
+    width: 48%;
+    height: 210%;
+    background:
+        linear-gradient(115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.05) 30%,
+            rgba(255, 255, 255, 0.42) 48%,
+            rgba(255, 255, 255, 0.1) 64%,
+            transparent 100%);
+    transform: rotate(13deg);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        left 820ms ease,
+        opacity var(--transition-base);
+}
+
+.services-property-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(24, 200, 255, 0.52);
+    box-shadow:
+        0 30px 76px rgba(24, 184, 255, 0.2),
+        0 18px 44px rgba(6, 23, 36, 0.14);
+}
+
+.services-property-card:hover::before {
+    transform: rotate(12deg) scale(1.14);
+    opacity: 1;
+}
+
+.services-property-card:hover::after {
+    left: 135%;
+    opacity: 1;
+}
+
+.services-property-card>* {
+    position: relative;
+    z-index: 3;
+}
+
+/* Label */
+.services-property-card__label {
+    transition:
+        transform var(--transition-base),
+        background var(--transition-base),
+        color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.services-property-card:hover .services-property-card__label {
+    transform: translateY(-2px);
+    background: var(--color-accent-soft);
+    color: var(--color-accent-deep);
+    box-shadow: 0 14px 30px rgba(24, 184, 255, 0.16);
+}
+
+.services-property-card--dark:hover .services-property-card__label {
+    background: rgba(255, 138, 61, 0.16);
+    color: var(--color-orange-bright);
+}
+
+/* Заголовок */
+.services-property-card h3 {
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base),
+        text-shadow var(--transition-base);
+}
+
+.services-property-card:hover h3 {
+    transform: translateX(4px);
+    color: var(--color-accent-deep);
+}
+
+.services-property-card--dark:hover h3 {
+    color: var(--color-white);
+    text-shadow: 0 0 26px rgba(24, 200, 255, 0.28);
+}
+
+/* Список */
+.services-property-card .services-check-list li {
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base);
+}
+
+.services-property-card:hover .services-check-list li {
+    transform: translateX(3px);
+}
+
+.services-property-card .services-check-list li::before {
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.services-property-card:hover .services-check-list li::before {
+    transform: rotate(-45deg) scale(1.08);
+    border-color: var(--color-accent-bright);
+    box-shadow: 0 0 18px rgba(24, 200, 255, 0.36);
+}
+
+.services-property-card--dark:hover .services-check-list li::before {
+    border-color: var(--color-orange-bright);
+    box-shadow: 0 0 18px rgba(255, 138, 61, 0.32);
+}
+
+/* Тёплый hover для commercial */
+.services-property-card--dark:hover {
+    border-color: rgba(255, 138, 61, 0.42);
+    box-shadow:
+        0 30px 76px rgba(255, 138, 61, 0.18),
+        0 18px 44px rgba(0, 0, 0, 0.22);
+}
+
+.services-property-card--dark::before {
+    border-color: rgba(255, 138, 61, 0.2);
+    background:
+        linear-gradient(90deg, transparent 48%, rgba(255, 138, 61, 0.11) 49%, rgba(255, 138, 61, 0.11) 51%, transparent 52%),
+        linear-gradient(0deg, transparent 48%, rgba(255, 138, 61, 0.11) 49%, rgba(255, 138, 61, 0.11) 51%, transparent 52%);
+}
+
+/* Адаптив */
+@media (max-width: 767px) {
+
+    .services-property-section .section-heading h2,
+    .services-property-section .section-heading p:not(.section-kicker) {
+        max-width: 100%;
+    }
+
+    .services-property-card {
+        border-radius: var(--radius-lg);
+    }
+
+    .services-property-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .services-property-card::before {
+        right: -100px;
+        bottom: -118px;
+        width: 240px;
+        height: 240px;
+    }
+
+    .services-property-card::after {
+        width: 60%;
+    }
+}
+
+/* =========================
+   Services FAQ centered
+========================= */
+
+.services-faq-section .faq-list {
+    width: min(100%, 900px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.services-faq-section .faq-item {
+    text-align: center;
+}
+
+.services-faq-section .faq-button {
+    position: relative;
+    justify-content: center;
+    padding-right: 58px;
+    padding-left: 58px;
+    text-align: center;
+}
+
+.services-faq-section .faq-button::after {
+    position: absolute;
+    right: 20px;
+    flex: 0 0 auto;
+}
+
+.services-faq-section .faq-panel {
+    text-align: center;
+}
+
+.services-faq-section .faq-panel p {
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+}
