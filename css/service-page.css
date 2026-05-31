@@ -435,7 +435,7 @@
 }
 
 .window-replacement-page .service-overview__photo {
-    --service-overview-photo: url("../assets/images/window-replacement-overview.jpg");
+    --service-overview-photo: url("../assets/images/energy-efficient-windows.jpg");
 }
 
 .window-installation-page .service-hero {
@@ -443,7 +443,7 @@
 }
 
 .window-installation-page .service-overview__photo {
-    --service-overview-photo: url("../assets/images/window-installation-overview.jpg");
+    --service-overview-photo: url("../assets/images/window-installation.jpg");
 }
 
 .window-repair-page .service-hero {
@@ -459,7 +459,7 @@
 }
 
 .energy-efficient-page .service-overview__photo {
-    --service-overview-photo: url("../assets/images/energy-efficient-overview.jpg");
+    --service-overview-photo: url("../assets/images/window-replacement.jpg");
 }
 
 /* =========================
@@ -903,3 +903,4 @@
     margin-right: auto;
     margin-left: auto;
 }
+
