@@ -273,73 +273,141 @@
             </div>
         </section>
 
-        <!-- SERVICES GRID -->
-        <section class="section section--light services-grid-section" id="services-grid"
-            aria-labelledby="services-grid-title">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="section-kicker">Exactly four services</p>
-
-                    <h2 id="services-grid-title">
-                        Choose the window category that best matches your project.
-                    </h2>
-
-                    <p>
-                        {{COMPANY_NAME}} helps users compare local provider options by service type,
-                        not by making direct contractor claims.
-                    </p>
-                </div>
-
-                <div class="services-page-grid">
-                    <a class="photo-card services-page-card services-page-card--replacement"
-                        href="window-replacement.html">
-                        <span class="services-page-card__number">01</span>
-
-                        <span class="photo-card__content">
-                            <span class="photo-card__tag">Replacement</span>
-                            <h3>Window Replacement</h3>
-                            <p>Compare local providers for full-window replacement projects.</p>
-                            <span class="services-page-card__link">View service →</span>
-                        </span>
-                    </a>
-
-                    <a class="photo-card services-page-card services-page-card--installation"
-                        href="window-installation.html">
-                        <span class="services-page-card__number">02</span>
-
-                        <span class="photo-card__content">
-                            <span class="photo-card__tag">Installation</span>
-                            <h3>Window Installation</h3>
-                            <p>Explore provider options for new window installation requests.</p>
-                            <span class="services-page-card__link">View service →</span>
-                        </span>
-                    </a>
-
-                    <a class="photo-card services-page-card services-page-card--repair" href="window-repair.html">
-                        <span class="services-page-card__number">03</span>
-
-                        <span class="photo-card__content">
-                            <span class="photo-card__tag">Repair</span>
-                            <h3>Window Repair</h3>
-                            <p>Review companies that handle common window repair categories.</p>
-                            <span class="services-page-card__link">View service →</span>
-                        </span>
-                    </a>
-
-                    <a class="photo-card services-page-card services-page-card--efficient"
-                        href="energy-efficient-windows.html">
-                        <span class="services-page-card__number">04</span>
-
-                        <span class="photo-card__content">
-                            <span class="photo-card__tag">Efficiency</span>
-                            <h3>Energy-Efficient Windows</h3>
-                            <p>Compare providers for insulated, efficient, and modern window upgrades.</p>
-                            <span class="services-page-card__link">View service →</span>
-                        </span>
-                    </a>
+    <!-- SERVICES MARQUEE -->
+    <section class="section section--light services-marquee-section" id="services-grid"
+        aria-labelledby="services-grid-title">
+        <div class="container">
+            <div class="section-heading services-marquee-heading">
+                <p class="section-kicker">Exactly four services</p>
+    
+                <h2 id="services-grid-title">
+                    Choose the window category that best matches your project.
+                </h2>
+    
+                <p>
+                    {{COMPANY_NAME}} helps users compare local provider options by service type,
+                    not by making direct contractor claims.
+                </p>
+            </div>
+        </div>
+    
+        <div class="services-marquee" aria-label="Window service categories">
+            <div class="services-marquee__viewport">
+                <div class="services-marquee__track">
+                    <div class="services-marquee__group">
+                        <a class="service-window-card service-window-card--replacement" href="window-replacement.html">
+                            <span class="service-window-card__number">01</span>
+                            <span class="service-window-card__panes" aria-hidden="true"></span>
+                            <span class="service-window-card__handle" aria-hidden="true"></span>
+    
+                            <span class="service-window-card__content">
+                                <span class="service-window-card__tag">Replacement</span>
+                                <strong>Window Replacement</strong>
+                                <small>Compare local providers for full-window replacement projects.</small>
+                                <span class="service-window-card__link">View service</span>
+                            </span>
+                        </a>
+    
+                        <a class="service-window-card service-window-card--installation" href="window-installation.html">
+                            <span class="service-window-card__number">02</span>
+                            <span class="service-window-card__panes" aria-hidden="true"></span>
+                            <span class="service-window-card__handle" aria-hidden="true"></span>
+    
+                            <span class="service-window-card__content">
+                                <span class="service-window-card__tag">Installation</span>
+                                <strong>Window Installation</strong>
+                                <small>Explore provider options for new window installation requests.</small>
+                                <span class="service-window-card__link">View service</span>
+                            </span>
+                        </a>
+    
+                        <a class="service-window-card service-window-card--repair" href="window-repair.html">
+                            <span class="service-window-card__number">03</span>
+                            <span class="service-window-card__panes" aria-hidden="true"></span>
+                            <span class="service-window-card__handle" aria-hidden="true"></span>
+    
+                            <span class="service-window-card__content">
+                                <span class="service-window-card__tag">Repair</span>
+                                <strong>Window Repair</strong>
+                                <small>Review companies that handle common window repair categories.</small>
+                                <span class="service-window-card__link">View service</span>
+                            </span>
+                        </a>
+    
+                        <a class="service-window-card service-window-card--efficient" href="energy-efficient-windows.html">
+                            <span class="service-window-card__number">04</span>
+                            <span class="service-window-card__panes" aria-hidden="true"></span>
+                            <span class="service-window-card__handle" aria-hidden="true"></span>
+    
+                            <span class="service-window-card__content">
+                                <span class="service-window-card__tag">Efficiency</span>
+                                <strong>Energy-Efficient Windows</strong>
+                                <small>Compare providers for insulated, efficient, and modern window upgrades.</small>
+                                <span class="service-window-card__link">View service</span>
+                            </span>
+                        </a>
+                    </div>
+    
+                    <div class="services-marquee__group" aria-hidden="true">
+                        <a class="service-window-card service-window-card--replacement" href="window-replacement.html"
+                            tabindex="-1">
+                            <span class="service-window-card__number">01</span>
+                            <span class="service-window-card__panes" aria-hidden="true"></span>
+                            <span class="service-window-card__handle" aria-hidden="true"></span>
+    
+                            <span class="service-window-card__content">
+                                <span class="service-window-card__tag">Replacement</span>
+                                <strong>Window Replacement</strong>
+                                <small>Compare local providers for full-window replacement projects.</small>
+                                <span class="service-window-card__link">View service</span>
+                            </span>
+                        </a>
+    
+                        <a class="service-window-card service-window-card--installation" href="window-installation.html"
+                            tabindex="-1">
+                            <span class="service-window-card__number">02</span>
+                            <span class="service-window-card__panes" aria-hidden="true"></span>
+                            <span class="service-window-card__handle" aria-hidden="true"></span>
+    
+                            <span class="service-window-card__content">
+                                <span class="service-window-card__tag">Installation</span>
+                                <strong>Window Installation</strong>
+                                <small>Explore provider options for new window installation requests.</small>
+                                <span class="service-window-card__link">View service</span>
+                            </span>
+                        </a>
+    
+                        <a class="service-window-card service-window-card--repair" href="window-repair.html" tabindex="-1">
+                            <span class="service-window-card__number">03</span>
+                            <span class="service-window-card__panes" aria-hidden="true"></span>
+                            <span class="service-window-card__handle" aria-hidden="true"></span>
+    
+                            <span class="service-window-card__content">
+                                <span class="service-window-card__tag">Repair</span>
+                                <strong>Window Repair</strong>
+                                <small>Review companies that handle common window repair categories.</small>
+                                <span class="service-window-card__link">View service</span>
+                            </span>
+                        </a>
+    
+                        <a class="service-window-card service-window-card--efficient" href="energy-efficient-windows.html"
+                            tabindex="-1">
+                            <span class="service-window-card__number">04</span>
+                            <span class="service-window-card__panes" aria-hidden="true"></span>
+                            <span class="service-window-card__handle" aria-hidden="true"></span>
+    
+                            <span class="service-window-card__content">
+                                <span class="service-window-card__tag">Efficiency</span>
+                                <strong>Energy-Efficient Windows</strong>
+                                <small>Compare providers for insulated, efficient, and modern window upgrades.</small>
+                                <span class="service-window-card__link">View service</span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- PROJECT TYPES -->
         <section class="section section--blue project-types-section" aria-labelledby="project-types-title">
