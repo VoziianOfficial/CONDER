@@ -737,7 +737,7 @@
 /* mobile */
 @media (max-width: 520px) {
     .contact-card {
-        min-height: 140px;
+        min-height: 10px;
         padding: 20px 76px 20px 18px;
     }
 
@@ -1142,5 +1142,56 @@
 @media (prefers-reduced-motion: reduce) {
     .contact-after-banner::after {
         animation: none;
+    }
+}
+
+.contact-form {
+    padding: 26px;
+}
+
+.contact-form__grid {
+    gap: 14px;
+}
+
+.form-control {
+    min-height: 46px;
+    padding: 12px 14px;
+}
+
+textarea.form-control,
+#project-details {
+    min-height: 96px;
+}
+
+.contact-choice {
+    min-height: 42px;
+    padding: 10px 12px;
+}
+
+.contact-form__submit {
+    margin-top: 14px;
+    min-height: 48px;
+}
+
+/* Contact method in one row on mobile */
+@media (max-width: 520px) {
+    .contact-form fieldset.contact-form__wide .contact-choice-group {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .contact-form fieldset.contact-form__wide .contact-choice {
+        min-height: 40px;
+        justify-content: center;
+        padding: 9px 8px;
+        font-size: 0.82rem;
+        white-space: nowrap;
+    }
+
+    .contact-form fieldset.contact-form__wide .contact-choice__mark {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 16px;
     }
 }
