@@ -616,3 +616,494 @@
         transition: none;
     }
 }
+
+/* =========================
+   About flow map
+   No left card, no numbers
+========================= */
+
+.about-flow-section {
+    overflow: hidden;
+}
+
+.about-flow-section::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: -160px;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(24, 200, 255, 0.16), transparent 68%);
+    pointer-events: none;
+}
+
+.about-flow-section::after {
+    content: "";
+    position: absolute;
+    right: -160px;
+    bottom: -130px;
+    width: 390px;
+    height: 390px;
+    border: 1px solid rgba(24, 200, 255, 0.16);
+    border-radius: 56px;
+    transform: rotate(14deg);
+    background:
+        linear-gradient(90deg, transparent 48%, rgba(24, 200, 255, 0.1) 49%, rgba(24, 200, 255, 0.1) 51%, transparent 52%),
+        linear-gradient(0deg, transparent 48%, rgba(24, 200, 255, 0.1) 49%, rgba(24, 200, 255, 0.1) 51%, transparent 52%);
+    pointer-events: none;
+}
+
+.about-flow-map {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 72px;
+    padding-top: 76px;
+}
+
+.about-flow-map__line {
+    position: absolute;
+    top: 34px;
+    right: 7%;
+    left: 7%;
+    height: 4px;
+    border-radius: var(--radius-pill);
+    background:
+        linear-gradient(90deg,
+            rgba(24, 200, 255, 0.18),
+            var(--color-accent-bright),
+            var(--color-orange-bright),
+            var(--color-accent-bright),
+            rgba(24, 200, 255, 0.18));
+    box-shadow:
+        0 0 24px rgba(24, 200, 255, 0.38),
+        0 0 34px rgba(255, 138, 61, 0.16);
+}
+
+.about-flow-map__line::before {
+    content: "";
+    position: absolute;
+    inset: -14px 0;
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.34),
+            transparent);
+    animation: aboutFlowShine 3.8s ease-in-out infinite;
+}
+
+@keyframes aboutFlowShine {
+    0% {
+        transform: translateX(-45%);
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(45%);
+        opacity: 0;
+    }
+}
+
+.about-flow-step {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+.about-flow-step__icon {
+    position: absolute;
+    top: -92px;
+    left: 50%;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 92px;
+    height: 92px;
+    border: 1px solid rgba(24, 200, 255, 0.34);
+    border-radius: 30px;
+    background:
+        radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.25), transparent 34%),
+        linear-gradient(145deg, rgba(24, 200, 255, 0.2), rgba(255, 255, 255, 0.055));
+    box-shadow:
+        0 20px 46px rgba(0, 0, 0, 0.26),
+        0 0 34px rgba(24, 200, 255, 0.2);
+    transform: translateX(-50%);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        background var(--transition-base);
+}
+
+.about-flow-step__icon svg {
+    width: 46px;
+    height: 46px;
+}
+
+.about-flow-step__icon svg path,
+.about-flow-step__icon svg rect {
+    fill: none;
+    stroke: var(--color-accent-bright);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.about-flow-step:hover .about-flow-step__icon {
+    transform: translateX(-50%) translateY(-8px) scale(1.05);
+    border-color: rgba(24, 200, 255, 0.68);
+    background:
+        radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.32), transparent 34%),
+        linear-gradient(145deg, rgba(24, 200, 255, 0.3), rgba(255, 255, 255, 0.07));
+    box-shadow:
+        0 26px 60px rgba(0, 0, 0, 0.32),
+        0 0 50px rgba(24, 200, 255, 0.38);
+}
+
+.about-flow-step--warm .about-flow-step__icon {
+    border-color: rgba(255, 138, 61, 0.36);
+    box-shadow:
+        0 20px 46px rgba(0, 0, 0, 0.26),
+        0 0 34px rgba(255, 138, 61, 0.16);
+}
+
+.about-flow-step--warm .about-flow-step__icon svg path,
+.about-flow-step--warm .about-flow-step__icon svg rect {
+    stroke: var(--color-orange-bright);
+}
+
+.about-flow-step--warm:hover .about-flow-step__icon {
+    border-color: rgba(255, 138, 61, 0.68);
+    background:
+        radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.32), transparent 34%),
+        linear-gradient(145deg, rgba(255, 138, 61, 0.28), rgba(255, 255, 255, 0.07));
+    box-shadow:
+        0 26px 60px rgba(0, 0, 0, 0.32),
+        0 0 50px rgba(255, 138, 61, 0.32);
+}
+
+.about-flow-step__content {
+    display: grid;
+    gap: 10px;
+    max-width: 240px;
+}
+
+.about-flow-step__content::before {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 3px;
+    margin: 0 auto 4px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, var(--color-accent-bright), var(--color-white));
+    box-shadow: 0 0 22px rgba(24, 200, 255, 0.38);
+    transition:
+        width var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.about-flow-step--warm .about-flow-step__content::before {
+    background: linear-gradient(90deg, var(--color-orange-bright), var(--color-white));
+    box-shadow: 0 0 22px rgba(255, 138, 61, 0.3);
+}
+
+.about-flow-step:hover .about-flow-step__content::before {
+    width: 96px;
+}
+
+.about-flow-step h3 {
+    color: var(--color-white);
+    font-size: clamp(1.04rem, 1.8vw, 1.32rem);
+    line-height: 1.08;
+    transition:
+        color var(--transition-base),
+        text-shadow var(--transition-base);
+}
+
+.about-flow-step p {
+    color: var(--color-text-muted-light);
+    font-size: 0.88rem;
+    line-height: 1.48;
+}
+
+.about-flow-step:hover h3 {
+    color: var(--color-accent-bright);
+    text-shadow: 0 0 22px rgba(24, 200, 255, 0.24);
+}
+
+.about-flow-step--warm:hover h3 {
+    color: var(--color-orange-bright);
+    text-shadow: 0 0 22px rgba(255, 138, 61, 0.2);
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+    .about-flow-map {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 24px;
+        margin-top: 42px;
+        padding-top: 0;
+    }
+
+    .about-flow-map__line {
+        display: none;
+    }
+
+    .about-flow-step {
+        justify-items: start;
+        grid-template-columns: 86px 1fr;
+        gap: 18px;
+        text-align: left;
+        align-items: start;
+        padding: 18px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .about-flow-step__icon {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 82px;
+        height: 82px;
+        border-radius: 26px;
+        transform: none;
+    }
+
+    .about-flow-step:hover .about-flow-step__icon {
+        transform: translateY(-5px) scale(1.04);
+    }
+
+    .about-flow-step__icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .about-flow-step__content {
+        max-width: 100%;
+    }
+
+    .about-flow-step__content::before {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+    .about-flow-map {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about-flow-step {
+        grid-template-columns: 70px 1fr;
+        gap: 16px;
+        padding: 20px 0;
+    }
+
+    .about-flow-step__icon {
+        width: 66px;
+        height: 66px;
+        border-radius: 22px;
+    }
+
+    .about-flow-step__icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .about-flow-step h3 {
+        font-size: 1rem;
+    }
+
+    .about-flow-step p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-flow-map__line::before {
+        animation: none;
+    }
+}
+
+/* Remove flow line completely */
+.about-flow-map__line {
+    display: none;
+}
+
+.about-flow-map__line::before {
+    display: none;
+}
+
+/* =========================
+   About benefits compact cards
+   Icon top right
+========================= */
+
+.about-benefits__grid {
+    align-items: stretch;
+}
+
+.about-benefit-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 220px;
+    padding: 26px 92px 26px 26px;
+}
+
+.about-benefit-card__icon {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin: 0;
+    border-radius: 18px;
+    background:
+        radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.32), transparent 34%),
+        linear-gradient(135deg, rgba(24, 200, 255, 0.2), rgba(255, 255, 255, 0.08));
+    color: var(--color-accent-bright);
+    font-size: 1.7rem;
+    font-weight: 950;
+    box-shadow:
+        0 16px 34px rgba(24, 184, 255, 0.16),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        background var(--transition-base),
+        color var(--transition-base);
+}
+
+.about-benefit-card h3 {
+    max-width: 340px;
+    margin-top: 0;
+}
+
+.about-benefit-card p {
+    max-width: 440px;
+}
+
+/* hover */
+.about-benefit-card:hover .about-benefit-card__icon {
+    transform: translateY(-4px) scale(1.05);
+    background:
+        radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.4), transparent 34%),
+        linear-gradient(135deg, var(--color-accent-bright), var(--color-accent-hover));
+    color: var(--color-white);
+    box-shadow:
+        0 20px 46px rgba(24, 184, 255, 0.28),
+        0 0 34px rgba(24, 200, 255, 0.22);
+}
+
+/* wide card тоже ниже и красивее */
+.about-benefit-card--wide {
+    min-height: 190px;
+    padding-right: 110px;
+}
+
+.about-benefit-card--wide .about-benefit-card__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    color: var(--color-orange-bright);
+    background:
+        radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.32), transparent 34%),
+        linear-gradient(135deg, rgba(255, 138, 61, 0.18), rgba(255, 255, 255, 0.08));
+    box-shadow:
+        0 16px 34px rgba(255, 138, 61, 0.14),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.about-benefit-card--wide:hover .about-benefit-card__icon {
+    background:
+        radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.4), transparent 34%),
+        linear-gradient(135deg, var(--color-orange-bright), var(--color-orange-hover));
+    color: var(--color-white);
+    box-shadow:
+        0 20px 46px rgba(255, 138, 61, 0.26),
+        0 0 34px rgba(255, 138, 61, 0.22);
+}
+
+/* tablet */
+@media (max-width: 1023px) {
+    .about-benefit-card {
+        min-height: 200px;
+        padding: 24px 86px 24px 24px;
+    }
+
+    .about-benefit-card__icon {
+        width: 54px;
+        height: 54px;
+        font-size: 1.55rem;
+    }
+
+    .about-benefit-card--wide {
+        min-height: 180px;
+    }
+}
+
+/* mobile */
+@media (max-width: 639px) {
+
+    .about-benefit-card,
+    .about-benefit-card--wide {
+        min-height: auto;
+        padding: 22px 78px 22px 20px;
+    }
+
+    .about-benefit-card__icon,
+    .about-benefit-card--wide .about-benefit-card__icon {
+        top: 18px;
+        right: 18px;
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+        font-size: 1.35rem;
+    }
+
+    .about-benefit-card h3 {
+        max-width: 230px;
+    }
+
+    .about-benefit-card p {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .about-benefit-card,
+    .about-benefit-card--wide {
+        padding: 20px 68px 20px 18px;
+    }
+
+    .about-benefit-card__icon,
+    .about-benefit-card--wide .about-benefit-card__icon {
+        top: 16px;
+        right: 16px;
+        width: 42px;
+        height: 42px;
+        font-size: 1.18rem;
+    }
+
+    .about-benefit-card h3 {
+        font-size: 1.05rem;
+    }
+
+    .about-benefit-card p {
+        font-size: 0.84rem;
+    }
+}
