@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CONDER | Independent Window Provider Comparison</title>
+    <meta name="description"
+        content="Learn how CONDER helps homeowners and businesses organize window service requests and compare local provider options.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" data-header>
+        <div class="container site-header__inner">
+            <a class="site-logo" href="index.html" aria-label="CONDER home">
+                <span class="site-logo__mark" aria-hidden="true">
+                    <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="skyGradientHeaderAbout" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#58C7FF" />
+                                <stop offset="100%" stop-color="#2EAFFF" />
+                            </linearGradient>
+
+                            <clipPath id="rightInnerClipHeaderAbout">
+                                <polygon points="265,132 371,87 371,377 265,339" />
+                            </clipPath>
+                        </defs>
+
+                        <polygon points="118,90 260,110 260,364 118,385" fill="#0B2E63" />
+                        <polygon points="140,112 240,124 240,348 140,361" fill="white" />
+                        <polygon points="148,120 232,131 232,338 148,352" fill="url(#skyGradientHeaderAbout)" />
+
+                        <path d="M148 352V245
+                                C162 244 174 249 181 258
+                                C187 250 198 247 208 251
+                                C224 257 230 270 229 285
+                                C242 287 252 294 258 306
+                                C266 322 266 338 266 352H148Z" fill="white" />
+
+                        <polygon points="247,120 390,63 390,405 247,353" fill="#0B2E63" />
+                        <polygon points="265,132 371,87 371,377 265,339" fill="white" />
+
+                        <g clip-path="url(#rightInnerClipHeaderAbout)" stroke="#0B2E63" stroke-width="12"
+                            stroke-linecap="square">
+                            <line x1="316" y1="108" x2="316" y2="358" />
+                            <line x1="255" y1="235" x2="380" y2="228" />
+                        </g>
+
+                        <polygon points="240,124 247,120 247,353 240,348" fill="white" />
+                        <rect x="257" y="228" width="12" height="44" rx="6" fill="#F28A2E" />
+                    </svg>
+                </span>
+
+                <span class="site-logo__content">
+                    <span class="site-logo__text" data-company-name>CONDER</span>
+                    <span class="site-logo__meta">Window comparison</span>
+                </span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Primary navigation">
+                <a class="nav-link" href="index.html" data-nav-link>Home</a>
+
+                <div class="services-dropdown" data-services-dropdown>
+                    <button class="services-toggle" type="button" aria-expanded="false"
+                        aria-controls="desktop-services-menu" data-services-toggle>
+                        Services
+                        <svg class="services-toggle__chevron" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                    <div class="services-dropdown__menu" id="desktop-services-menu" data-services-menu
+                        data-render-services="dropdown"></div>
+                </div>
+
+                <a class="nav-link" href="about.html" data-nav-link>About</a>
+                <a class="nav-link" href="contact.html" data-nav-link>Contact</a>
+            </nav>
+
+            <div class="site-header__actions">
+                <a class="btn btn--primary btn--small header-phone" href="tel:+18885550148" data-phone-link>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M7.1 4.5l2.1 4.7-1.5 1.1c.9 1.9 2.4 3.4 4.2 4.2l1.1-1.5 4.7 2.1-.8 3.3c-.2.8-.9 1.3-1.7 1.2C8.9 19 5 15.1 4.4 8.8c-.1-.8.4-1.5 1.2-1.7l1.5-.6z"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                    <span data-company-phone-text>Compare Window Providers</span>
+                </a>
+
+                <a class="btn btn--ghost-light btn--small header-contact" href="contact.html">
+                    Contact
+                </a>
+
+                <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu"
+                    aria-expanded="false" data-menu-open>
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>
+        <div class="mobile-menu__top">
+            <a class="site-logo" href="index.html" aria-label="CONDER home">
+                <span class="site-logo__mark" aria-hidden="true">
+                    <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="skyGradientMobileAbout" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#58C7FF" />
+                                <stop offset="100%" stop-color="#2EAFFF" />
+                            </linearGradient>
+
+                            <clipPath id="rightInnerClipMobileAbout">
+                                <polygon points="265,132 371,87 371,377 265,339" />
+                            </clipPath>
+                        </defs>
+
+                        <polygon points="118,90 260,110 260,364 118,385" fill="#0B2E63" />
+                        <polygon points="140,112 240,124 240,348 140,361" fill="white" />
+                        <polygon points="148,120 232,131 232,338 148,352" fill="url(#skyGradientMobileAbout)" />
+
+                        <path d="M148 352V245
+                                C162 244 174 249 181 258
+                                C187 250 198 247 208 251
+                                C224 257 230 270 229 285
+                                C242 287 252 294 258 306
+                                C266 322 266 338 266 352H148Z" fill="white" />
+
+                        <polygon points="247,120 390,63 390,405 247,353" fill="#0B2E63" />
+                        <polygon points="265,132 371,87 371,377 265,339" fill="white" />
+
+                        <g clip-path="url(#rightInnerClipMobileAbout)" stroke="#0B2E63" stroke-width="12"
+                            stroke-linecap="square">
+                            <line x1="316" y1="108" x2="316" y2="358" />
+                            <line x1="255" y1="235" x2="380" y2="228" />
+                        </g>
+
+                        <polygon points="240,124 247,120 247,353 240,348" fill="white" />
+                        <rect x="257" y="228" width="12" height="44" rx="6" fill="#F28A2E" />
+                    </svg>
+                </span>
+
+                <span class="site-logo__content">
+                    <span class="site-logo__text" data-company-name>CONDER</span>
+                    <span class="site-logo__meta">Window comparison</span>
+                </span>
+            </a>
+
+            <button class="mobile-menu__close" type="button" aria-label="Close menu" data-menu-close></button>
+        </div>
+
+        <div class="mobile-menu__content">
+            <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="mobile-menu__group">
+                <p class="mobile-menu__label">Window services</p>
+                <div class="mobile-menu__services" data-render-services="mobile"></div>
+            </div>
+
+            <div class="mobile-menu__group">
+                <p class="mobile-menu__label">Contact details</p>
+
+                <div class="mobile-menu__contacts">
+                    <a href="tel:+18885550148" data-phone-link>
+                        <span aria-hidden="true">☎</span>
+                        <span data-company-phone>(888) 555-0148</span>
+                    </a>
+
+                    <a href="mailto:hello@conderwindows.com" data-email-link>
+                        <span aria-hidden="true">✉</span>
+                        <span data-company-email>hello@conderwindows.com</span>
+                    </a>
+
+                    <span>
+                        <span aria-hidden="true">⌁</span>
+                        <span data-company-service-area>Independent window service provider matching across selected
+                            areas in the United States</span>
+                    </span>
+                </div>
+
+                <a class="btn btn--primary mobile-menu__cta" href="contact.html">
+                    Request Provider Options
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="site-hero about-hero" aria-labelledby="about-hero-title">
+            <div class="container site-hero__inner">
+                <div class="site-hero__content">
+                    <p class="site-hero__eyebrow">About the platform</p>
+
+                    <h1 class="site-hero__title" id="about-hero-title">
+                        Making Window Provider Comparison Easier to Understand
+                    </h1>
+
+                    <p class="site-hero__text">
+                        {{COMPANY_NAME}} helps people organize window service requests and compare
+                        local provider options with more clarity before making contact.
+                    </p>
+
+                    <div class="site-hero__actions">
+                        <a class="btn btn--primary" href="contact.html">
+                            Request Provider Options
+                        </a>
+
+                        <a class="btn btn--ghost-light" href="services.html">
+                            View Window Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPANY STORY -->
+        <section class="section section--light about-story" aria-labelledby="about-story-title">
+            <div class="container">
+                <div class="about-story__layout">
+                    <div class="about-story__content">
+                        <p class="section-kicker">Company story</p>
+
+                        <h2 id="about-story-title">
+                            CONDER was created for people who want a cleaner way to compare window service options.
+                        </h2>
+
+                        <p>
+                            Window projects can be confusing. A homeowner may be comparing replacement windows,
+                            repair options, glass upgrades, frame materials, energy performance, timelines,
+                            and provider availability at the same time.
+                        </p>
+
+                        <p>
+                            {{COMPANY_NAME}} was built to make that early stage easier. The platform helps users
+                            separate the project into clear service categories, understand what questions to ask,
+                            and request quote options from independent local providers.
+                        </p>
+
+                        <p>
+                            {{COMPANY_NAME}} is not a direct window contractor. The platform does not install,
+                            repair, replace, or service windows directly. It helps users compare provider options
+                            and organize their request before choosing who to contact.
+                        </p>
+                    </div>
+
+                    <div class="about-story__visual" aria-label="Modern window comparison concept">
+                        <div class="about-story__photo"></div>
+
+                        <div class="about-story__note">
+                            <span>Independent model</span>
+                            <strong>Provider comparison, not direct contracting.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AGGREGATOR MODEL -->
+        <section class="section dark-section about-model" aria-labelledby="about-model-title">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <p class="section-kicker section-kicker--light">Aggregator model</p>
+
+                    <h2 id="about-model-title">
+                        How the CONDER comparison path works.
+                    </h2>
+
+                    <p>
+                        The process is designed to help users move from scattered project details
+                        to a more organized provider comparison request.
+                    </p>
+                </div>
+
+                <div class="about-model__steps">
+                    <article class="about-step-card">
+                        <span>01</span>
+                        <h3>Select a window service category</h3>
+                        <p>
+                            Users begin with replacement, installation, repair, or energy-efficient window upgrades.
+                        </p>
+                    </article>
+
+                    <article class="about-step-card">
+                        <span>02</span>
+                        <h3>Review project factors</h3>
+                        <p>
+                            The request can include property type, window condition, glass goals, timing,
+                            and service direction.
+                        </p>
+                    </article>
+
+                    <article class="about-step-card">
+                        <span>03</span>
+                        <h3>Request quotes</h3>
+                        <p>
+                            Users submit project details so local independent providers may respond with options.
+                        </p>
+                    </article>
+
+                    <article class="about-step-card">
+                        <span>04</span>
+                        <h3>Compare provider responses</h3>
+                        <p>
+                            Users can compare scope, availability, timing, materials, and quote details.
+                        </p>
+                    </article>
+
+                    <article class="about-step-card">
+                        <span>05</span>
+                        <h3>Verify provider details</h3>
+                        <p>
+                            Homeowners are responsible for checking licensing, insurance, warranty terms,
+                            and contractor qualifications.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <section class="about-marquee-section" aria-label="Window service links">
+            <div class="about-marquee" data-about-marquee>
+                <div class="about-marquee__track">
+                    <a href="window-replacement.html">Window Replacement</a>
+                    <a href="window-installation.html">Window Installation</a>
+                    <a href="window-repair.html">Window Repair</a>
+                    <a href="energy-efficient-windows.html">Energy-Efficient Windows</a>
+                    <a href="services.html">Residential Windows</a>
+                    <a href="services.html">Commercial Windows</a>
+                    <a href="services.html">Glass Upgrade</a>
+                    <a href="energy-efficient-windows.html">Energy Savings</a>
+
+                    <a href="window-replacement.html" aria-hidden="true">Window Replacement</a>
+                    <a href="window-installation.html" aria-hidden="true">Window Installation</a>
+                    <a href="window-repair.html" aria-hidden="true">Window Repair</a>
+                    <a href="energy-efficient-windows.html" aria-hidden="true">Energy-Efficient Windows</a>
+                    <a href="services.html" aria-hidden="true">Residential Windows</a>
+                    <a href="services.html" aria-hidden="true">Commercial Windows</a>
+                    <a href="services.html" aria-hidden="true">Glass Upgrade</a>
+                    <a href="energy-efficient-windows.html" aria-hidden="true">Energy Savings</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY USERS USE CONDER -->
+        <section class="section section--blue about-benefits" aria-labelledby="about-benefits-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-kicker">Why users use CONDER</p>
+
+                    <h2 id="about-benefits-title">
+                        A comparison-first experience for window service decisions.
+                    </h2>
+
+                    <p>
+                        The platform is built around clarity, request organization, and safe aggregator language.
+                    </p>
+                </div>
+
+                <div class="about-benefits__grid">
+                    <article class="about-benefit-card">
+                        <span class="about-benefit-card__icon">⌁</span>
+                        <h3>Easier comparison</h3>
+                        <p>
+                            Users can compare common window service categories without searching provider websites one
+                            by one.
+                        </p>
+                    </article>
+
+                    <article class="about-benefit-card">
+                        <span class="about-benefit-card__icon">▦</span>
+                        <h3>Organized request path</h3>
+                        <p>
+                            The site helps users think through project type, glass needs, property type, and quote
+                            details.
+                        </p>
+                    </article>
+
+                    <article class="about-benefit-card">
+                        <span class="about-benefit-card__icon">◇</span>
+                        <h3>Service category clarity</h3>
+                        <p>
+                            Replacement, installation, repair, and efficiency upgrades are separated into clear paths.
+                        </p>
+                    </article>
+
+                    <article class="about-benefit-card">
+                        <span class="about-benefit-card__icon">◎</span>
+                        <h3>Local provider discovery</h3>
+                        <p>
+                            Users can explore provider options that may be relevant to their project and location.
+                        </p>
+                    </article>
+
+                    <article class="about-benefit-card about-benefit-card--wide">
+                        <span class="about-benefit-card__icon">!</span>
+                        <h3>No direct contractor claims</h3>
+                        <p>
+                            {{COMPANY_NAME}} does not claim to send technicians, perform installations,
+                            handle repairs, or complete window work. It is an independent comparison platform.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST / TESTIMONIALS -->
+        <section class="section section--light about-trust" aria-labelledby="about-trust-title">
+            <div class="container">
+                <div class="about-trust__layout">
+                    <div class="about-trust__intro">
+                        <p class="section-kicker">Trust and clarity</p>
+
+                        <h2 id="about-trust-title">
+                            Built to keep the provider decision in the user’s hands.
+                        </h2>
+
+                        <p>
+                            {{COMPANY_NAME}} helps with comparison and request organization. Users should always
+                            review provider details, licensing, insurance, project scope, and quote terms directly.
+                        </p>
+
+                        <a class="btn btn--primary" href="contact.html">
+                            Compare Providers
+                        </a>
+                    </div>
+
+                    <div class="about-trust__cards">
+                        <article class="about-quote-card">
+                            <p>
+                                “The platform made the service categories clearer before I requested options.”
+                            </p>
+                            <span>Residential window comparison</span>
+                        </article>
+
+                        <article class="about-quote-card">
+                            <p>
+                                “I liked that the site did not pretend to be the contractor. It helped me compare.”
+                            </p>
+                            <span>Provider research request</span>
+                        </article>
+
+                        <article class="about-quote-card">
+                            <p>
+                                “It gave me a simple way to organize a window upgrade request.”
+                            </p>
+                            <span>Energy-efficient window inquiry</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="section about-final-section" aria-labelledby="about-final-title">
+            <div class="container">
+                <div class="about-final-card">
+                    <div>
+                        <p class="section-kicker section-kicker--light">Start comparing</p>
+
+                        <h2 id="about-final-title">
+                            Explore window provider options with a clearer request path.
+                        </h2>
+
+                        <p>
+                            Compare local provider categories for replacement, installation, repair,
+                            and energy-efficient window upgrades through an independent platform.
+                        </p>
+                    </div>
+
+                    <div class="about-final-card__actions">
+                        <a class="btn btn--primary" href="contact.html">
+                            Request Provider Options
+                        </a>
+
+                        <a class="btn btn--ghost-light" href="services.html">
+                            View Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__main">
+            <div class="site-footer__brand">
+                <a class="site-logo" href="index.html" aria-label="CONDER home">
+                    <span class="site-logo__mark" aria-hidden="true">
+                        <svg width="512" height="512" viewBox="0 0 512 512" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="skyGradientFooterAbout" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#58C7FF" />
+                                    <stop offset="100%" stop-color="#2EAFFF" />
+                                </linearGradient>
+
+                                <clipPath id="rightInnerClipFooterAbout">
+                                    <polygon points="265,132 371,87 371,377 265,339" />
+                                </clipPath>
+                            </defs>
+
+                            <polygon points="118,90 260,110 260,364 118,385" fill="#0B2E63" />
+                            <polygon points="140,112 240,124 240,348 140,361" fill="white" />
+                            <polygon points="148,120 232,131 232,338 148,352" fill="url(#skyGradientFooterAbout)" />
+
+                            <path d="M148 352V245
+                                    C162 244 174 249 181 258
+                                    C187 250 198 247 208 251
+                                    C224 257 230 270 229 285
+                                    C242 287 252 294 258 306
+                                    C266 322 266 338 266 352H148Z" fill="white" />
+
+                            <polygon points="247,120 390,63 390,405 247,353" fill="#0B2E63" />
+                            <polygon points="265,132 371,87 371,377 265,339" fill="white" />
+
+                            <g clip-path="url(#rightInnerClipFooterAbout)" stroke="#0B2E63" stroke-width="12"
+                                stroke-linecap="square">
+                                <line x1="316" y1="108" x2="316" y2="358" />
+                                <line x1="255" y1="235" x2="380" y2="228" />
+                            </g>
+
+                            <polygon points="240,124 247,120 247,353 240,348" fill="white" />
+                            <rect x="257" y="228" width="12" height="44" rx="6" fill="#F28A2E" />
+                        </svg>
+                    </span>
+
+                    <span class="site-logo__content">
+                        <span class="site-logo__text" data-company-name>CONDER</span>
+                        <span class="site-logo__meta">Window comparison</span>
+                    </span>
+                </a>
+
+                <p data-footer-description>
+                    CONDER is an independent window service comparison platform that helps homeowners and businesses
+                    explore local provider options for replacement, installation, repair, and energy-efficient window
+                    projects.
+                </p>
+
+                <div class="site-footer__meta">
+                    <span>Company ID: <strong data-company-id>CON-WIN-4827</strong></span>
+                    <span data-company-address>1287 Harbor Glass Avenue, Tampa, FL 33602, USA</span>
+                    <span data-company-service-area>Independent window service provider matching across selected areas
+                        in the United States</span>
+                    <a href="tel:+18885550148" data-phone-link data-company-phone>(888) 555-0148</a>
+                    <a href="mailto:hello@conderwindows.com" data-email-link
+                        data-company-email>hello@conderwindows.com</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Navigation</h3>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Window Services</h3>
+
+                <ul class="footer-links" data-render-services="footer"></ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Legal</h3>
+
+                <ul class="footer-links" data-render-legal="footer"></ul>
+            </div>
+        </div>
+
+        <div class="site-footer__disclaimer">
+            <div class="container">
+                <p data-company-disclaimer>
+                    Disclaimer: This site is a free service to assist homeowners in connecting with local service
+                    providers. All contractors/providers are independent and this site does not warrant or guarantee any
+                    work performed. It is the responsibility of the homeowner to verify that the hired contractor
+                    furnishes the necessary license and insurance required for the work being performed. All persons
+                    depicted in a photo or video are actors or models and not contractors listed on this site.
+                </p>
+            </div>
+        </div>
+
+        <div class="site-footer__bottom">
+            <div class="container site-footer__bottom-inner">
+                <span>© 2026 <span data-company-name>CONDER</span>. All rights reserved.</span>
+                <span>Independent window service comparison platform.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+</body>
+
+</html>

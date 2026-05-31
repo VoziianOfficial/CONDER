@@ -1,0 +1,599 @@
+/* =========================
+   Services hero
+========================= */
+
+.services-hero {
+    --hero-image:
+        url("../assets/images/services-hero-windows.jpg");
+}
+
+.services-hero .site-hero__inner {
+    min-height: clamp(500px, 70vh, 680px);
+}
+
+/* =========================
+   Services grid
+========================= */
+
+.services-grid-section {
+    overflow: hidden;
+}
+
+.services-grid-section::before {
+    content: "";
+    position: absolute;
+    top: 70px;
+    right: -130px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(24, 200, 255, 0.14), transparent 68%);
+    pointer-events: none;
+}
+
+.services-page-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.services-page-card {
+    aspect-ratio: 1 / 1;
+    min-height: auto;
+}
+
+.services-page-card--replacement {
+    --photo: url("../assets/images/window-replacement.jpg");
+}
+
+.services-page-card--installation {
+    --photo: url("../assets/images/window-installation.jpg");
+}
+
+.services-page-card--repair {
+    --photo: url("../assets/images/window-repair.jpg");
+}
+
+.services-page-card--efficient {
+    --photo: url("../assets/images/energy-efficient-windows.jpg");
+}
+
+.services-page-card__number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.82rem;
+    font-weight: 950;
+    letter-spacing: 0.12em;
+}
+
+.services-page-card .photo-card__content {
+    padding: 24px;
+}
+
+.services-page-card h3 {
+    max-width: 280px;
+}
+
+.services-page-card p {
+    max-width: 330px;
+}
+
+.services-page-card__link {
+    display: inline-flex;
+    width: fit-content;
+    margin-top: 16px;
+    color: var(--color-accent-bright);
+    font-size: 0.9rem;
+    font-weight: 900;
+    transition: transform var(--transition-base);
+}
+
+.services-page-card:hover .services-page-card__link {
+    transform: translateX(4px);
+}
+
+/* =========================
+   Project types
+========================= */
+
+.project-types-section {
+    overflow: hidden;
+}
+
+.project-types-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.project-type-card {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 250px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: var(--radius-lg);
+    background: var(--color-dark-800);
+    padding: 22px;
+    box-shadow: var(--shadow-soft);
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.project-type-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        var(--project-photo, linear-gradient(135deg, var(--color-dark-800), var(--color-dark-700))) center / cover no-repeat;
+    transform: scale(1.03);
+    transition: transform var(--transition-slow);
+}
+
+.project-type-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(180deg, rgba(6, 23, 36, 0.08), rgba(6, 23, 36, 0.92)),
+        linear-gradient(135deg, rgba(24, 184, 255, 0.18), transparent);
+}
+
+.project-type-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(24, 200, 255, 0.58);
+    box-shadow: var(--shadow-blue);
+}
+
+.project-type-card:hover::before {
+    transform: scale(1.09);
+}
+
+.project-type-card h3 {
+    color: var(--color-white);
+    font-size: clamp(1.18rem, 2.8vw, 1.55rem);
+}
+
+.project-type-card p {
+    margin-top: 10px;
+    color: var(--color-text-light);
+}
+
+.project-type-card--home {
+    --project-photo: url("../assets/images/home-window-replacement.jpg");
+}
+
+.project-type-card--bathroom {
+    --project-photo: url("../assets/images/bathroom-window-installation.jpg");
+}
+
+.project-type-card--office {
+    --project-photo: url("../assets/images/office-window-upgrade.jpg");
+}
+
+.project-type-card--balcony {
+    --project-photo: url("../assets/images/balcony-window-repair.jpg");
+}
+
+.project-type-card--glass {
+    --project-photo: url("../assets/images/large-glass-window.jpg");
+}
+
+.project-type-card--energy {
+    --project-photo: url("../assets/images/efficient-window-upgrade.jpg");
+}
+
+/* =========================
+   Residential / Commercial
+========================= */
+
+.services-property-section {
+    overflow: hidden;
+}
+
+.services-property-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.services-property-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at top right, rgba(24, 200, 255, 0.12), transparent 34%),
+        var(--color-white);
+    padding: 26px;
+    box-shadow: var(--shadow-soft);
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.services-property-card::before {
+    content: "";
+    position: absolute;
+    right: -90px;
+    bottom: -120px;
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(24, 184, 255, 0.18);
+    border-radius: 36px;
+    transform: rotate(12deg);
+    background:
+        linear-gradient(90deg, transparent 48%, rgba(24, 184, 255, 0.1) 49%, rgba(24, 184, 255, 0.1) 51%, transparent 52%),
+        linear-gradient(0deg, transparent 48%, rgba(24, 184, 255, 0.1) 49%, rgba(24, 184, 255, 0.1) 51%, transparent 52%);
+    pointer-events: none;
+}
+
+.services-property-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-border-blue);
+    box-shadow: var(--shadow-medium);
+}
+
+.services-property-card--dark {
+    border-color: var(--color-border-dark);
+    background:
+        radial-gradient(circle at top right, rgba(255, 138, 61, 0.14), transparent 30%),
+        radial-gradient(circle at top left, rgba(24, 200, 255, 0.16), transparent 32%),
+        linear-gradient(135deg, var(--color-dark-900), var(--color-dark-850));
+    color: var(--color-white);
+}
+
+.services-property-card__label {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 16px;
+    border-radius: var(--radius-pill);
+    background: var(--color-accent-soft);
+    color: var(--color-accent-deep);
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    font-weight: 950;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.services-property-card--dark .services-property-card__label {
+    background: rgba(255, 138, 61, 0.18);
+    color: var(--color-orange-bright);
+}
+
+.services-property-card h3 {
+    max-width: 620px;
+    font-size: clamp(1.5rem, 3.6vw, 2.35rem);
+}
+
+.services-property-card--dark h3 {
+    color: var(--color-white);
+}
+
+.services-property-card p {
+    max-width: 660px;
+    margin-top: 14px;
+    color: var(--color-text-muted);
+}
+
+.services-property-card--dark p {
+    color: var(--color-text-light);
+}
+
+.services-check-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.services-check-list li {
+    position: relative;
+    padding-left: 28px;
+    color: var(--color-text-main);
+}
+
+.services-property-card--dark .services-check-list li {
+    color: var(--color-text-light);
+}
+
+.services-check-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.62em;
+    left: 0;
+    width: 14px;
+    height: 8px;
+    border-bottom: 2px solid var(--color-accent);
+    border-left: 2px solid var(--color-accent);
+    transform: rotate(-45deg);
+}
+
+.services-property-card--dark .services-check-list li::before {
+    border-color: var(--color-orange-bright);
+}
+
+/* =========================
+   Compare section
+========================= */
+
+.compare-section {
+    overflow: hidden;
+}
+
+.compare-section::before {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: -160px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(24, 200, 255, 0.14), transparent 68%);
+    pointer-events: none;
+}
+
+.compare-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.compare-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.035)),
+        rgba(255, 255, 255, 0.03);
+    padding: 24px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base);
+}
+
+.compare-card::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: rgba(24, 200, 255, 0.11);
+    transition: transform var(--transition-slow);
+}
+
+.compare-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(24, 200, 255, 0.36);
+    background:
+        linear-gradient(145deg, rgba(24, 200, 255, 0.11), rgba(255, 255, 255, 0.035)),
+        rgba(255, 255, 255, 0.04);
+}
+
+.compare-card:hover::before {
+    transform: scale(1.25);
+}
+
+.compare-card span {
+    display: inline-flex;
+    margin-bottom: 28px;
+    color: var(--color-orange-bright);
+    font-size: 0.78rem;
+    font-weight: 950;
+    letter-spacing: 0.14em;
+}
+
+.compare-card h3 {
+    color: var(--color-white);
+    font-size: 1.24rem;
+}
+
+.compare-card p {
+    margin-top: 10px;
+    color: var(--color-text-muted-light);
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.services-faq-section {
+    overflow: hidden;
+}
+
+.services-faq-section .faq-list {
+    max-width: 900px;
+}
+
+/* =========================
+   Final CTA
+========================= */
+
+.services-final-section {
+    overflow: hidden;
+    background: var(--color-bg-main);
+    padding-top: 0;
+}
+
+.services-final-card {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    gap: 26px;
+    overflow: hidden;
+    border: 1px solid rgba(24, 200, 255, 0.2);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 14% 18%, rgba(24, 200, 255, 0.22), transparent 32%),
+        radial-gradient(circle at 90% 20%, rgba(255, 138, 61, 0.14), transparent 28%),
+        linear-gradient(135deg, var(--color-dark-900), var(--color-dark-850) 52%, var(--color-dark-800));
+    padding: 32px;
+    color: var(--color-white);
+    box-shadow: var(--shadow-dark);
+}
+
+.services-final-card::before {
+    content: "";
+    position: absolute;
+    right: -115px;
+    bottom: -145px;
+    z-index: -1;
+    width: 340px;
+    height: 340px;
+    border: 1px solid rgba(24, 200, 255, 0.25);
+    border-radius: 44px;
+    transform: rotate(12deg);
+    background:
+        linear-gradient(90deg, transparent 48%, rgba(24, 200, 255, 0.12) 49%, rgba(24, 200, 255, 0.12) 51%, transparent 52%),
+        linear-gradient(0deg, transparent 48%, rgba(24, 200, 255, 0.12) 49%, rgba(24, 200, 255, 0.12) 51%, transparent 52%);
+}
+
+.services-final-card h2 {
+    max-width: 760px;
+    color: var(--color-white);
+}
+
+.services-final-card p {
+    max-width: 720px;
+    margin-top: 16px;
+    color: var(--color-text-light);
+}
+
+.services-final-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* =========================
+   Services page reveal
+========================= */
+
+.services-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 520ms ease,
+        transform 520ms ease;
+    transition-delay: calc(var(--reveal-index, 0) * 55ms);
+}
+
+.services-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.services-hero .site-hero__content {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+        opacity 620ms ease,
+        transform 620ms ease;
+}
+
+.services-hero.is-ready .site-hero__content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (min-width: 640px) {
+
+    .services-page-grid,
+    .project-types-grid,
+    .compare-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-property-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-property-card {
+        min-height: 430px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .services-property-card,
+    .services-final-card {
+        padding: 36px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-page-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .project-types-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .compare-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .compare-card--wide {
+        grid-column: span 2;
+    }
+
+    .services-final-card {
+        grid-template-columns: 1fr auto;
+        align-items: center;
+    }
+
+    .services-final-card__actions {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 520px) {
+    .services-page-card {
+        aspect-ratio: 1 / 1.05;
+    }
+
+    .services-property-card {
+        padding: 24px;
+    }
+
+    .services-final-card {
+        padding: 26px;
+    }
+
+    .services-final-card__actions .btn {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .services-reveal,
+    .services-hero .site-hero__content {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
