@@ -1345,3 +1345,197 @@
         animation: none;
     }
 }
+
+/* =========================
+   Popular projects: animated gradient frame
+   Safe: does not break photo-card images
+========================= */
+
+.home-project-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+        0 18px 44px rgba(6, 23, 36, 0.14),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        filter var(--transition-base);
+}
+
+/* Контент занимает всю карточку, поэтому рамку рисуем тут */
+.home-project-card .photo-card__content {
+    position: relative;
+    z-index: 4;
+}
+
+/* Градиентная рамка поверх фото */
+.home-project-card .photo-card__content::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    z-index: -1;
+    border-radius: calc(var(--radius-lg) - 10px);
+    padding: 1.5px;
+    background:
+        linear-gradient(135deg,
+            rgba(24, 200, 255, 0.95),
+            rgba(255, 255, 255, 0.38),
+            rgba(255, 138, 61, 0.9),
+            rgba(24, 200, 255, 0.95));
+    background-size: 220% 220%;
+    opacity: 0.78;
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+    transition:
+        opacity var(--transition-base),
+        inset var(--transition-base),
+        filter var(--transition-base);
+}
+
+/* Hover */
+.home-project-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(24, 200, 255, 0.52);
+    filter: saturate(1.08);
+    box-shadow:
+        0 30px 76px rgba(24, 184, 255, 0.24),
+        0 18px 44px rgba(6, 23, 36, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.home-project-card:hover .photo-card__content::after {
+    inset: 10px;
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(24, 200, 255, 0.32));
+    animation: projectBorderFlow 2.8s linear infinite;
+}
+
+@keyframes projectBorderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 220% 50%;
+    }
+}
+
+/* Разные акценты для карточек */
+.home-project-card--home .photo-card__content::after,
+.home-project-card--bathroom .photo-card__content::after,
+.home-project-card--balcony .photo-card__content::after,
+.home-project-card--glass .photo-card__content::after {
+    background:
+        linear-gradient(135deg,
+            rgba(24, 200, 255, 0.95),
+            rgba(255, 255, 255, 0.38),
+            rgba(46, 175, 255, 0.9),
+            rgba(24, 200, 255, 0.95));
+    background-size: 220% 220%;
+}
+
+.home-project-card--office .photo-card__content::after {
+    background:
+        linear-gradient(135deg,
+            rgba(255, 138, 61, 0.95),
+            rgba(255, 255, 255, 0.34),
+            rgba(24, 200, 255, 0.72),
+            rgba(255, 138, 61, 0.95));
+    background-size: 220% 220%;
+}
+
+/* Текст чуть живее */
+.home-project-card h3 {
+    transition:
+        transform var(--transition-base),
+        text-shadow var(--transition-base);
+}
+
+.home-project-card:hover h3 {
+    transform: translateY(-3px);
+    text-shadow: 0 0 22px rgba(24, 200, 255, 0.34);
+}
+
+.home-project-card--office:hover h3 {
+    text-shadow: 0 0 22px rgba(255, 138, 61, 0.3);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .home-project-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .home-project-card .photo-card__content::after {
+        inset: 10px;
+    }
+
+    .home-project-card:hover .photo-card__content::after {
+        inset: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-project-card:hover .photo-card__content::after {
+        animation: none;
+    }
+}
+
+/* =========================
+   Popular projects: glass shine sweep
+========================= */
+
+.home-project-card .photo-card__content::before {
+    content: "";
+    position: absolute;
+    top: -90%;
+    left: -75%;
+    z-index: 1;
+    width: 46%;
+    height: 230%;
+    background:
+        linear-gradient(115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.04) 28%,
+            rgba(255, 255, 255, 0.42) 48%,
+            rgba(255, 255, 255, 0.10) 64%,
+            transparent 100%);
+    transform: rotate(13deg);
+    pointer-events: none;
+    opacity: 0;
+    transition:
+        left 820ms ease,
+        opacity var(--transition-base);
+}
+
+.home-project-card:hover .photo-card__content::before {
+    left: 135%;
+    opacity: 1;
+}
+
+/* чтобы текст и рамка были выше/ниже правильно */
+.home-project-card .photo-card__content>* {
+    position: relative;
+    z-index: 3;
+}
+
+.home-project-card .photo-card__content::after {
+    z-index: 2;
+}
+
+/* чуть мягче на мобилке */
+@media (max-width: 767px) {
+    .home-project-card .photo-card__content::before {
+        width: 58%;
+        height: 210%;
+    }
+}
