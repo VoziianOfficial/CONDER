@@ -1,6 +1,4 @@
-/* =========================
-   Contact hero
-========================= */
+
 
 .contact-hero {
     --hero-image:
@@ -11,9 +9,7 @@
     min-height: clamp(500px, 70vh, 680px);
 }
 
-/* =========================
-   Contact intro
-========================= */
+
 
 .contact-intro {
     overflow: hidden;
@@ -98,9 +94,7 @@
     line-height: 1.38;
 }
 
-/* =========================
-   Contact form section
-========================= */
+
 
 .contact-form-section {
     overflow: hidden;
@@ -355,9 +349,7 @@
     font-weight: 800;
 }
 
-/* =========================
-   Contact cards
-========================= */
+
 
 .contact-cards-section {
     overflow: hidden;
@@ -432,9 +424,7 @@
 }
 
 
-/* =========================
-   FAQ
-========================= */
+
 
 .contact-faq-section {
     overflow: hidden;
@@ -444,9 +434,7 @@
     max-width: 900px;
 }
 
-/* =========================
-   Final CTA
-========================= */
+
 
 .contact-final-section {
     overflow: hidden;
@@ -504,9 +492,7 @@
     gap: 12px;
 }
 
-/* =========================
-   Contact reveal
-========================= */
+
 
 .contact-reveal {
     opacity: 0;
@@ -535,9 +521,7 @@
     transform: translateY(0);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (min-width: 640px) {
     .contact-choice-group {
@@ -630,9 +614,7 @@
     }
 }
 
-/* =========================
-   Contact cards compact + icons top right
-========================= */
+
 
 .contact-cards-grid {
     align-items: stretch;
@@ -679,7 +661,7 @@
     max-width: 260px;
 }
 
-/* hover */
+
 .contact-card {
     transition:
         transform var(--transition-base),
@@ -708,7 +690,7 @@
         box-shadow var(--transition-base);
 }
 
-/* warm accents for email/support */
+
 .contact-card:nth-child(2) .contact-card__icon,
 .contact-card:nth-child(3) .contact-card__icon {
     background:
@@ -719,7 +701,7 @@
         0 0 0 6px rgba(255, 138, 61, 0.08);
 }
 
-/* tablet */
+
 @media (max-width: 1023px) {
     .contact-card {
         min-height: 155px;
@@ -734,7 +716,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 520px) {
     .contact-card {
         min-height: 10px;
@@ -760,9 +742,7 @@
     }
 }
 
-/* =========================
-   Contact FAQ centered
-========================= */
+
 
 .contact-faq-section .faq-list {
     width: min(100%, 900px);
@@ -798,10 +778,7 @@
     margin-left: auto;
 }
 
-/* =========================
-   Contact after banner section
-   No cards, no numbers
-========================= */
+
 
 .contact-after-banner-section {
     overflow: hidden;
@@ -1070,7 +1047,7 @@
     line-height: 1.38;
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .contact-after-banner {
         min-height: auto;
@@ -1090,7 +1067,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 639px) {
     .contact-after-banner {
         border-radius: var(--radius-lg);
@@ -1173,7 +1150,7 @@ textarea.form-control,
     min-height: 48px;
 }
 
-/* Contact method in one row on mobile */
+
 @media (max-width: 520px) {
     .contact-form fieldset.contact-form__wide .contact-choice-group {
         display: grid;

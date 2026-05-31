@@ -1,18 +1,18 @@
 :root {
-    /* Dark brand colors */
+    
     --color-dark-900: #061724;
     --color-dark-850: #082033;
     --color-dark-800: #0B2A42;
     --color-dark-700: #103A59;
 
-    /* Light juicy backgrounds */
+    
     --color-bg-main: #F4FAFE;
     --color-bg-soft: #EEF7FC;
     --color-bg-blue: #E6F4FB;
     --color-bg-ice: #F8FCFF;
     --color-white: #FFFFFF;
 
-    /* Main sky blue accent */
+    
     --color-accent: #18B8FF;
     --color-accent-bright: #18C8FF;
     --color-accent-hover: #009FE3;
@@ -20,45 +20,45 @@
     --color-accent-soft: #DDF5FF;
     --color-accent-glow: rgba(24, 184, 255, 0.28);
 
-    /* Warm orange accent */
+    
     --color-orange: #FF8A3D;
     --color-orange-bright: #FF9F43;
     --color-orange-hover: #F2762E;
     --color-orange-soft: #FFE6D5;
     --color-orange-glow: rgba(255, 138, 61, 0.28);
 
-    /* Text on light */
+    
     --color-heading-dark: #071D2D;
     --color-text-main: #243B4E;
     --color-text-muted: #62788A;
     --color-text-soft: #8BA0AF;
 
-    /* Text on dark */
+    
     --color-heading-light: #FFFFFF;
     --color-text-light: #DCEAF3;
     --color-text-muted-light: #9EB8C9;
 
-    /* Cards and borders */
+    
     --color-card: #FFFFFF;
     --color-card-soft: #F8FCFF;
     --color-border: #D5E8F3;
     --color-border-blue: rgba(24, 184, 255, 0.28);
     --color-border-dark: rgba(255, 255, 255, 0.12);
 
-    /* Shadows */
+    
     --shadow-soft: 0 18px 45px rgba(6, 23, 36, 0.08);
     --shadow-medium: 0 24px 60px rgba(6, 23, 36, 0.14);
     --shadow-dark: 0 28px 80px rgba(0, 0, 0, 0.32);
     --shadow-blue: 0 22px 55px rgba(24, 184, 255, 0.20);
     --shadow-orange: 0 18px 40px rgba(255, 138, 61, 0.24);
 
-    /* Layout */
+    
     --container: 1180px;
     --container-wide: 1320px;
     --section-padding: 76px;
     --section-padding-sm: 54px;
 
-    /* Radius */
+    
     --radius-xs: 10px;
     --radius-sm: 14px;
     --radius-md: 20px;
@@ -66,18 +66,16 @@
     --radius-xl: 36px;
     --radius-pill: 999px;
 
-    /* Motion */
+    
     --transition-fast: 180ms ease;
     --transition-base: 260ms ease;
     --transition-slow: 420ms ease;
 
-    /* Header */
+    
     --header-height: 78px;
 }
 
-/* =========================
-   Reset
-========================= */
+
 
 *,
 *::before,
@@ -178,9 +176,7 @@ fieldset {
     color: var(--color-white);
 }
 
-/* =========================
-   Accessibility
-========================= */
+
 
 .skip-link {
     position: fixed;
@@ -219,9 +215,7 @@ fieldset {
     outline-offset: 4px;
 }
 
-/* =========================
-   Typography
-========================= */
+
 
 h1,
 h2,
@@ -330,9 +324,7 @@ p {
     color: var(--color-text-light);
 }
 
-/* =========================
-   Layout helpers
-========================= */
+
 
 .container {
     width: min(100% - 32px, var(--container));
@@ -398,9 +390,7 @@ p {
     gap: 24px;
 }
 
-/* =========================
-   Buttons
-========================= */
+
 
 .btn {
     position: relative;
@@ -494,9 +484,7 @@ p {
     flex: 0 0 auto;
 }
 
-/* =========================
-   Global cards
-========================= */
+
 
 .card {
     border: 1px solid var(--color-border);
@@ -636,9 +624,7 @@ p {
     transform: translateX(4px);
 }
 
-/* =========================
-   Header
-========================= */
+
 
 .site-header {
     position: sticky;
@@ -898,9 +884,7 @@ p {
     top: 6px;
 }
 
-/* =========================
-   Mobile menu
-========================= */
+
 
 .mobile-menu {
     position: fixed;
@@ -1055,9 +1039,7 @@ p {
     width: 100%;
 }
 
-/* =========================
-   Hero base
-========================= */
+
 
 .site-hero {
     position: relative;
@@ -1195,9 +1177,7 @@ p {
     background: var(--color-accent-bright);
 }
 
-/* =========================
-   FAQ
-========================= */
+
 
 .faq-list {
     display: grid;
@@ -1259,9 +1239,7 @@ p {
     color: var(--color-text-muted);
 }
 
-/* =========================
-   Footer
-========================= */
+
 
 .site-footer {
     position: relative;
@@ -1376,9 +1354,7 @@ p {
     color: var(--color-accent-bright);
 }
 
-/* =========================
-   Cookie banner
-========================= */
+
 
 .cookie-banner {
     position: fixed;
@@ -1427,9 +1403,7 @@ p {
     gap: 10px;
 }
 
-/* =========================
-   Forms global
-========================= */
+
 
 .form-grid {
     display: grid;
@@ -1488,9 +1462,7 @@ textarea.form-control {
     display: block;
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (min-width: 640px) {
 
@@ -1631,9 +1603,7 @@ textarea.form-control {
     }
 }
 
-/* =========================
-   Reduced motion
-========================= */
+
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1659,9 +1629,7 @@ textarea.form-control {
     }
 }
 
-/* =========================
-   Global centered section headings
-========================= */
+
 
 .section-heading {
     width: 100%;
@@ -1689,7 +1657,7 @@ textarea.form-control {
     margin-left: auto;
 }
 
-/* Если h2 стоит в секции без .section-heading */
+
 .section>.container>h2,
 .section>.container--wide>h2 {
     max-width: 980px;

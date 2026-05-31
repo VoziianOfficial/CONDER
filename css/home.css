@@ -1,6 +1,4 @@
-/* =========================
-   Home hero
-========================= */
+
 
 .home-hero {
     --hero-image:
@@ -12,9 +10,7 @@
 }
 
 
-/* =========================
-   Popular projects
-========================= */
+
 
 .home-projects {
     overflow: hidden;
@@ -70,9 +66,7 @@
     max-width: 520px;
 }
 
-/* =========================
-   Residential / Commercial
-========================= */
+
 
 .home-property-types {
     overflow: hidden;
@@ -189,9 +183,7 @@
 }
 
 
-/* =========================
-   Testimonials
-========================= */
+
 
 .home-testimonials {
     overflow: hidden;
@@ -262,9 +254,7 @@
     font-weight: 800;
 }
 
-/* =========================
-   Final CTA
-========================= */
+
 
 .home-final-cta {
     overflow: hidden;
@@ -323,9 +313,7 @@
     align-items: center;
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (min-width: 640px) {
     .home-services__grid {
@@ -413,10 +401,7 @@
     }
 }
 
-/* =========================
-   Window pane service section
-   Card itself = window
-========================= */
+
 
 .window-pane-section {
     overflow: hidden;
@@ -469,7 +454,7 @@
     gap: 20px;
 }
 
-/* Main card-window */
+
 .window-pane-card {
     --window-photo: linear-gradient(135deg, #58C7FF, #F8FCFF);
 
@@ -528,7 +513,7 @@
     transform: scale(1.1);
 }
 
-/* Real window dividers across the whole card */
+
 .window-pane-card__muntins {
     position: absolute;
     inset: 0;
@@ -562,13 +547,13 @@
     transform: translateY(-50%);
 }
 
-/* Inner glass border */
+
 .window-pane-card__muntins {
     border: 6px solid rgba(255, 255, 255, 0.82);
     border-radius: 23px 23px 8px 8px;
 }
 
-/* Side handle on the card-window */
+
 .window-pane-card__handle {
     position: absolute;
     top: 48%;
@@ -584,7 +569,7 @@
     transform: translateY(-50%);
 }
 
-/* Number */
+
 .window-pane-card__number {
     position: absolute;
     top: 22px;
@@ -604,7 +589,7 @@
     backdrop-filter: blur(12px);
 }
 
-/* Text plate on glass */
+
 .window-pane-card__content {
     position: relative;
     z-index: 5;
@@ -686,7 +671,7 @@
     transform: translateX(5px);
 }
 
-/* Photos */
+
 .window-pane-card--replacement {
     --window-photo: url("../assets/images/window-replacement.jpg");
 }
@@ -712,9 +697,7 @@
     color: var(--color-orange-bright);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (min-width: 640px) {
     .window-pane-grid {
@@ -843,10 +826,7 @@
     }
 }
 
-/* =========================
-   Property cards: hover + shine only
-   Does NOT change original card background
-========================= */
+
 
 .property-card {
     position: relative;
@@ -859,7 +839,7 @@
         filter var(--transition-base);
 }
 
-/* Блеск поверх карточки */
+
 .property-card::after {
     content: "";
     position: absolute;
@@ -880,7 +860,7 @@
     transition: left 780ms ease;
 }
 
-/* Чтобы контент был выше декоративного слоя */
+
 .property-card__content {
     position: relative;
     z-index: 5;
@@ -899,7 +879,7 @@
     left: 135%;
 }
 
-/* Лейбл чуть светится на hover */
+
 .property-card__label {
     transition:
         transform var(--transition-base),
@@ -913,7 +893,7 @@
     box-shadow: 0 12px 26px rgba(24, 184, 255, 0.18);
 }
 
-/* Заголовок живее */
+
 .property-card h3 {
     transition:
         transform var(--transition-base),
@@ -929,7 +909,7 @@
     color: var(--color-orange-bright);
 }
 
-/* Галочки подсвечиваются */
+
 .property-card .check-list li::before {
     transition:
         transform var(--transition-base),
@@ -948,7 +928,7 @@
     box-shadow: 0 0 16px rgba(255, 138, 61, 0.32);
 }
 
-/* Ссылка двигается и подсвечивается */
+
 .property-card .link-arrow {
     transition:
         transform var(--transition-base),
@@ -968,7 +948,7 @@
     transform: translateX(5px);
 }
 
-/* На мобилках hover мягче */
+
 @media (max-width: 767px) {
     .property-card:hover {
         transform: translateY(-4px);
@@ -979,10 +959,7 @@
     }
 }
 
-/* =========================
-   Window path process section
-   Thin line + large nodes + compact mobile cards
-========================= */
+
 
 .window-path-section {
     position: relative;
@@ -1027,7 +1004,7 @@
     padding: 82px 0 10px;
 }
 
-/* тонкая линия */
+
 .window-path__line {
     position: absolute;
     top: 36px;
@@ -1082,7 +1059,7 @@
     text-align: center;
 }
 
-/* большие кружки */
+
 .window-path__number {
     position: absolute;
     top: -82px;
@@ -1156,7 +1133,7 @@
     line-height: 1.55;
 }
 
-/* ритм на десктопе */
+
 .window-path__step--two,
 .window-path__step--four {
     margin-top: 58px;
@@ -1182,9 +1159,7 @@
         0 0 52px rgba(255, 138, 61, 0.46);
 }
 
-/* =========================
-   Tablet: compact cards, icon top right
-========================= */
+
 
 @media (max-width: 1023px) {
     .window-path {
@@ -1274,9 +1249,7 @@
     }
 }
 
-/* =========================
-   Mobile: one column, low-height cards
-========================= */
+
 
 @media (max-width: 639px) {
     .window-path {
@@ -1346,10 +1319,7 @@
     }
 }
 
-/* =========================
-   Popular projects: animated gradient frame
-   Safe: does not break photo-card images
-========================= */
+
 
 .home-project-card {
     position: relative;
@@ -1365,13 +1335,13 @@
         filter var(--transition-base);
 }
 
-/* Контент занимает всю карточку, поэтому рамку рисуем тут */
+
 .home-project-card .photo-card__content {
     position: relative;
     z-index: 4;
 }
 
-/* Градиентная рамка поверх фото */
+
 .home-project-card .photo-card__content::after {
     content: "";
     position: absolute;
@@ -1401,7 +1371,7 @@
         filter var(--transition-base);
 }
 
-/* Hover */
+
 .home-project-card:hover {
     transform: translateY(-7px);
     border-color: rgba(24, 200, 255, 0.52);
@@ -1429,7 +1399,7 @@
     }
 }
 
-/* Разные акценты для карточек */
+
 .home-project-card--home .photo-card__content::after,
 .home-project-card--bathroom .photo-card__content::after,
 .home-project-card--balcony .photo-card__content::after,
@@ -1453,7 +1423,7 @@
     background-size: 220% 220%;
 }
 
-/* Текст чуть живее */
+
 .home-project-card h3 {
     transition:
         transform var(--transition-base),
@@ -1469,7 +1439,7 @@
     text-shadow: 0 0 22px rgba(255, 138, 61, 0.3);
 }
 
-/* Mobile */
+
 @media (max-width: 767px) {
     .home-project-card:hover {
         transform: translateY(-4px);
@@ -1490,9 +1460,7 @@
     }
 }
 
-/* =========================
-   Popular projects: glass shine sweep
-========================= */
+
 
 .home-project-card .photo-card__content::before {
     content: "";
@@ -1522,7 +1490,7 @@
     opacity: 1;
 }
 
-/* чтобы текст и рамка были выше/ниже правильно */
+
 .home-project-card .photo-card__content>* {
     position: relative;
     z-index: 3;
@@ -1532,7 +1500,7 @@
     z-index: 2;
 }
 
-/* чуть мягче на мобилке */
+
 @media (max-width: 767px) {
     .home-project-card .photo-card__content::before {
         width: 58%;

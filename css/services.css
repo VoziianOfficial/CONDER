@@ -1,6 +1,4 @@
-/* =========================
-   Services hero
-========================= */
+
 
 .services-hero {
     --hero-image:
@@ -12,10 +10,7 @@
 }
 
 
-/* =========================
-   Project types split layout
-   Photo | Text / Text | Photo
-========================= */
+
 
 .project-types-section {
     overflow: hidden;
@@ -280,7 +275,7 @@
     line-height: 1.6;
 }
 
-/* Photos */
+
 .project-type-split--home {
     --project-photo: url("../assets/images/home-window-replacement.jpg");
 }
@@ -297,7 +292,7 @@
     --project-photo: url("../assets/images/efficient-window-upgrade.jpg");
 }
 
-/* Warm cards */
+
 .project-type-split--office,
 .project-type-split--energy {
     border-color: rgba(255, 138, 61, 0.24);
@@ -337,9 +332,7 @@
     color: var(--color-orange-hover);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 1023px) {
 
@@ -441,9 +434,7 @@
         left: auto;
     }
 }
-/* =========================
-   Residential / Commercial
-========================= */
+
 
 .services-property-section {
     overflow: hidden;
@@ -573,9 +564,7 @@
 }
 
 
-/* =========================
-   FAQ
-========================= */
+
 
 .services-faq-section {
     overflow: hidden;
@@ -585,9 +574,7 @@
     max-width: 900px;
 }
 
-/* =========================
-   Final CTA
-========================= */
+
 
 .services-final-section {
     overflow: hidden;
@@ -645,9 +632,7 @@
     gap: 12px;
 }
 
-/* =========================
-   Services page reveal
-========================= */
+
 
 .services-reveal {
     opacity: 0;
@@ -676,9 +661,7 @@
     transform: translateY(0);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (min-width: 640px) {
 
@@ -760,9 +743,7 @@
     }
 }
 
-/* =========================
-   Services marquee window cards
-========================= */
+
 
 .services-marquee-section {
     overflow: hidden;
@@ -837,7 +818,7 @@
     }
 }
 
-/* Card itself = window */
+
 .service-window-card {
     --service-card-accent: var(--color-accent-bright);
     --service-card-accent-deep: var(--color-accent-deep);
@@ -868,7 +849,7 @@
         filter var(--transition-base);
 }
 
-/* Glass shine and depth */
+
 .service-window-card::before {
     content: "";
     position: absolute;
@@ -882,7 +863,7 @@
     pointer-events: none;
 }
 
-/* Moving highlight */
+
 .service-window-card::after {
     content: "";
     position: absolute;
@@ -920,7 +901,7 @@
     opacity: 1;
 }
 
-/* Window panes across the whole card */
+
 .service-window-card__panes {
     position: absolute;
     inset: 0;
@@ -956,7 +937,7 @@
     transform: translateY(-50%);
 }
 
-/* Window handle */
+
 .service-window-card__handle {
     position: absolute;
     top: 45%;
@@ -972,7 +953,7 @@
     transform: translateY(-50%);
 }
 
-/* Number */
+
 .service-window-card__number {
     position: absolute;
     top: 22px;
@@ -1001,7 +982,7 @@
     background: rgba(6, 23, 36, 0.58);
 }
 
-/* Text glass plate */
+
 .service-window-card__content {
     position: relative;
     z-index: 6;
@@ -1081,7 +1062,7 @@
     transform: translateX(5px);
 }
 
-/* Individual accents */
+
 .service-window-card--replacement {
     --service-card-accent: var(--color-accent-bright);
     --service-card-soft: rgba(24, 200, 255, 0.2);
@@ -1102,9 +1083,7 @@
     --service-card-soft: rgba(255, 138, 61, 0.22);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 1023px) {
     .services-marquee__track {
@@ -1222,15 +1201,13 @@
     }
 }
 
-/* =========================
-   Services property section polish
-========================= */
+
 
 .services-property-section {
     overflow: hidden;
 }
 
-/* Заголовок на всю ширину */
+
 .services-property-section .section-heading {
     max-width: 100%;
     width: 100%;
@@ -1244,7 +1221,7 @@
     max-width: 760px;
 }
 
-/* Карточки */
+
 .services-property-card {
     position: relative;
     isolation: isolate;
@@ -1258,7 +1235,7 @@
         background var(--transition-base);
 }
 
-/* Оконная декоративная рамка внутри */
+
 .services-property-card::before {
     content: "";
     position: absolute;
@@ -1280,7 +1257,7 @@
     pointer-events: none;
 }
 
-/* Блеск */
+
 .services-property-card::after {
     content: "";
     position: absolute;
@@ -1327,7 +1304,7 @@
     z-index: 3;
 }
 
-/* Label */
+
 .services-property-card__label {
     transition:
         transform var(--transition-base),
@@ -1348,7 +1325,7 @@
     color: var(--color-orange-bright);
 }
 
-/* Заголовок */
+
 .services-property-card h3 {
     transition:
         transform var(--transition-base),
@@ -1366,7 +1343,7 @@
     text-shadow: 0 0 26px rgba(24, 200, 255, 0.28);
 }
 
-/* Список */
+
 .services-property-card .services-check-list li {
     transition:
         transform var(--transition-base),
@@ -1395,7 +1372,7 @@
     box-shadow: 0 0 18px rgba(255, 138, 61, 0.32);
 }
 
-/* Тёплый hover для commercial */
+
 .services-property-card--dark:hover {
     border-color: rgba(255, 138, 61, 0.42);
     box-shadow:
@@ -1410,7 +1387,7 @@
         linear-gradient(0deg, transparent 48%, rgba(255, 138, 61, 0.11) 49%, rgba(255, 138, 61, 0.11) 51%, transparent 52%);
 }
 
-/* Адаптив */
+
 @media (max-width: 767px) {
 
     .services-property-section .section-heading h2,
@@ -1438,9 +1415,7 @@
     }
 }
 
-/* =========================
-   Services FAQ centered
-========================= */
+
 
 .services-faq-section .faq-list {
     width: min(100%, 900px);
@@ -1476,9 +1451,7 @@
     margin-left: auto;
 }
 
-/* =========================
-   Mobile marquee ON — keep card size
-========================= */
+
 
 @media (max-width: 767px) {
     .services-marquee {
@@ -1527,10 +1500,7 @@
     }
 }
 
-/* =========================
-   Compare strip section
-   No cards, clean horizontal list
-========================= */
+
 
 .compare-strip-section {
     overflow: hidden;
@@ -1785,9 +1755,7 @@
     color: var(--color-orange-bright);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 1023px) {
     .compare-strip {

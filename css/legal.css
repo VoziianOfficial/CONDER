@@ -1,6 +1,4 @@
-/* =========================
-   Legal hero
-========================= */
+
 
 .legal-hero {
     --hero-image:
@@ -11,9 +9,7 @@
     min-height: clamp(420px, 58vh, 560px);
 }
 
-/* =========================
-   Legal content
-========================= */
+
 
 .legal-content-section {
     overflow: hidden;
@@ -245,9 +241,7 @@
     color: var(--color-accent-hover);
 }
 
-/* =========================
-   Legal CTA
-========================= */
+
 
 .legal-final-section {
     overflow: hidden;
@@ -305,9 +299,7 @@
     gap: 12px;
 }
 
-/* =========================
-   Legal reveal
-========================= */
+
 
 .legal-reveal {
     opacity: 0;
@@ -336,9 +328,7 @@
     transform: translateY(0);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (min-width: 768px) {
     .legal-card {

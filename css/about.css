@@ -1,6 +1,4 @@
-/* =========================
-   About hero
-========================= */
+
 
 .about-hero {
     --hero-image:
@@ -11,9 +9,7 @@
     min-height: clamp(500px, 70vh, 680px);
 }
 
-/* =========================
-   Company story
-========================= */
+
 
 .about-story {
     overflow: hidden;
@@ -109,9 +105,7 @@
     line-height: 1.25;
 }
 
-/* =========================
-   Aggregator model
-========================= */
+
 
 .about-model {
     overflow: hidden;
@@ -197,9 +191,7 @@
     color: var(--color-text-muted-light);
 }
 
-/* =========================
-   Marquee
-========================= */
+
 
 .about-marquee-section {
     overflow: hidden;
@@ -273,9 +265,7 @@
     }
 }
 
-/* =========================
-   Benefits
-========================= */
+
 
 .about-benefits {
     overflow: hidden;
@@ -351,9 +341,7 @@
     color: var(--color-orange-hover);
 }
 
-/* =========================
-   Trust / testimonials
-========================= */
+
 
 .about-trust {
     overflow: hidden;
@@ -428,9 +416,7 @@
     font-weight: 850;
 }
 
-/* =========================
-   Final CTA
-========================= */
+
 
 .about-final-section {
     overflow: hidden;
@@ -488,9 +474,7 @@
     gap: 12px;
 }
 
-/* =========================
-   About reveal
-========================= */
+
 
 .about-reveal {
     opacity: 0;
@@ -519,9 +503,7 @@
     transform: translateY(0);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (min-width: 640px) {
 
@@ -617,10 +599,7 @@
     }
 }
 
-/* =========================
-   About flow map
-   No left card, no numbers
-========================= */
+
 
 .about-flow-section {
     overflow: hidden;
@@ -844,7 +823,7 @@
     text-shadow: 0 0 22px rgba(255, 138, 61, 0.2);
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .about-flow-map {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -896,7 +875,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 639px) {
     .about-flow-map {
         grid-template-columns: 1fr;
@@ -935,7 +914,7 @@
     }
 }
 
-/* Remove flow line completely */
+
 .about-flow-map__line {
     display: none;
 }
@@ -944,10 +923,7 @@
     display: none;
 }
 
-/* =========================
-   About benefits compact cards
-   Icon top right
-========================= */
+
 
 .about-benefits__grid {
     align-items: stretch;
@@ -995,7 +971,7 @@
     max-width: 440px;
 }
 
-/* hover */
+
 .about-benefit-card:hover .about-benefit-card__icon {
     transform: translateY(-4px) scale(1.05);
     background:
@@ -1007,7 +983,7 @@
         0 0 34px rgba(24, 200, 255, 0.22);
 }
 
-/* wide card тоже ниже и красивее */
+
 .about-benefit-card--wide {
     min-height: 190px;
     padding-right: 110px;
@@ -1036,7 +1012,7 @@
         0 0 34px rgba(255, 138, 61, 0.22);
 }
 
-/* tablet */
+
 @media (max-width: 1023px) {
     .about-benefit-card {
         min-height: 200px;
@@ -1054,7 +1030,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 639px) {
 
     .about-benefit-card,

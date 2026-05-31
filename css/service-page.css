@@ -1,6 +1,4 @@
-/* =========================
-   Service hero
-========================= */
+
 
 .service-hero {
     --hero-image:
@@ -40,9 +38,7 @@
     background: var(--color-orange);
 }
 
-/* =========================
-   Service overview
-========================= */
+
 
 .service-overview {
     overflow: hidden;
@@ -167,9 +163,7 @@
     line-height: 1.25;
 }
 
-/* =========================
-   Horizontal tabs
-========================= */
+
 
 .service-tabs-section {
     overflow: hidden;
@@ -300,9 +294,7 @@
 }
 
 
-/* =========================
-   Project examples
-========================= */
+
 
 .service-examples {
     overflow: hidden;
@@ -354,9 +346,7 @@
     max-width: 520px;
 }
 
-/* =========================
-   Service FAQ
-========================= */
+
 
 .service-faq {
     overflow: hidden;
@@ -366,9 +356,7 @@
     max-width: 900px;
 }
 
-/* =========================
-   Service CTA
-========================= */
+
 
 .service-final {
     overflow: hidden;
@@ -426,9 +414,7 @@
     gap: 12px;
 }
 
-/* =========================
-   Page-specific hero images
-========================= */
+
 
 .window-replacement-page .service-hero {
     --hero-image: url("../assets/images/window-replacement-hero.jpg");
@@ -462,9 +448,7 @@
     --service-overview-photo: url("../assets/images/window-replacement.jpg");
 }
 
-/* =========================
-   Reveal animation
-========================= */
+
 
 .service-page-reveal {
     opacity: 0;
@@ -493,9 +477,7 @@
     transform: translateY(0);
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (min-width: 640px) {
     .service-factors__grid {
@@ -604,10 +586,7 @@
     }
 }
 
-/* =========================
-   Service factors rail
-   No cards / no numbers / no nested boxes
-========================= */
+
 
 .service-factor-rail-section {
     overflow: hidden;
@@ -816,7 +795,7 @@
     color: var(--color-orange-bright);
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
     .service-factor-rail {
         display: flex;
@@ -836,7 +815,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 520px) {
     .service-factor-rail {
         margin-right: calc(var(--container-padding) * -1);
@@ -866,9 +845,7 @@
     }
 }
 
-/* =========================
-   Service page FAQ centered
-========================= */
+
 
 .service-faq .faq-list {
     width: min(100%, 900px);
