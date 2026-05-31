@@ -416,7 +416,6 @@
     margin-top: 10px;
     color: var(--color-text-muted);
     font-weight: 750;
-    word-break: break-word;
 }
 
 .contact-card a:hover {
