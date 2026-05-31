@@ -5,7 +5,7 @@ window.SITE_CONFIG = {
         name: 'CONDER',
         companyId: 'CON-WIN-4827',
         address: '1287 Harbor Glass Avenue, Tampa, FL 33602, USA',
-        serviceArea: 'Independent window service provider matching across selected areas in the United States'
+        serviceArea: 'Tampa Bay Area',
     },
 
     contact: {
