@@ -111,13 +111,7 @@
     box-shadow: var(--shadow-blue);
 }
 
-.property-card--residential {
-    --property-photo: url("../assets/images/residential-windows.jpg");
-}
 
-.property-card--commercial {
-    --property-photo: url("../assets/images/commercial-windows.jpg");
-}
 
 .property-card__content {
     display: flex;

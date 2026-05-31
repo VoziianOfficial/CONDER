@@ -1665,3 +1665,91 @@ textarea.form-control {
     margin-left: auto;
     text-align: center;
 }
+
+
+.final-cta-card,
+.services-final-card,
+.about-final-card,
+.contact-final-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+
+.final-cta-card>*,
+.services-final-card>*,
+.about-final-card>*,
+.contact-final-card>* {
+    position: relative;
+    z-index: 3;
+}
+
+
+.final-cta-card::after,
+.services-final-card::after,
+.about-final-card::after,
+.contact-final-card::after {
+    content: "";
+    position: absolute;
+    top: -85%;
+    left: -75%;
+    z-index: 2;
+    width: 42%;
+    height: 240%;
+    background:
+        linear-gradient(115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.04) 30%,
+            rgba(255, 255, 255, 0.36) 48%,
+            rgba(255, 255, 255, 0.10) 64%,
+            transparent 100%);
+    transform: rotate(13deg);
+    pointer-events: none;
+    opacity: 0;
+    transition:
+        left 900ms ease,
+        opacity var(--transition-base);
+}
+
+
+.final-cta-card:hover::after,
+.services-final-card:hover::after,
+.about-final-card:hover::after,
+.contact-final-card:hover::after {
+    left: 135%;
+    opacity: 1;
+}
+
+
+.final-cta-card:hover,
+.services-final-card:hover,
+.about-final-card:hover,
+.contact-final-card:hover {
+    box-shadow:
+        0 32px 76px rgba(24, 184, 255, 0.22),
+        0 18px 44px rgba(6, 23, 36, 0.16);
+}
+
+.final-cta-card.is-visible::after,
+.services-final-card.is-visible::after,
+.about-final-card.is-visible::after,
+.contact-final-card.is-visible::after {
+    animation: finalCardShine 1.2s ease 0.35s 1 both;
+}
+
+@keyframes finalCardShine {
+    0% {
+        left: -75%;
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 135%;
+        opacity: 0;
+    }
+}

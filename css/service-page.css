@@ -315,11 +315,11 @@
 }
 
 .service-example-card--apartment {
-    --photo: url("../assets/images/apartment-window-replacement.jpg");
+    --photo: url("../assets/images/home-window-replacement.jpg");
 }
 
 .service-example-card--office {
-    --photo: url("../assets/images/office-glass-upgrade.jpg");
+    --photo: url("../assets/images/office-window-upgrade.jpg");
 }
 
 .service-example-card--bathroom {
@@ -327,11 +327,11 @@
 }
 
 .service-example-card--storefront {
-    --photo: url("../assets/images/storefront-glass-repair.jpg");
+    --photo: url("../assets/images/window-replacement.jpg");
 }
 
 .service-example-card--modern {
-    --photo: url("../assets/images/home-window-modernization.jpg");
+    --photo: url("../assets/images/contact-hero-windows.jpg");
 }
 
 .service-example-card h3 {
